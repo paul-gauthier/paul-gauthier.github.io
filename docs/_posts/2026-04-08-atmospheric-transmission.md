@@ -19,12 +19,13 @@ A
 {% cite Vedovato2017SpaceDelayedChoice %}.
 
 <figure style="float: right; max-width: 40%; margin: 0 0 1em 1em;">
-  <img src="https://quantumfuture.dei.unipd.it/wp-content/uploads/2017/04/Delayed_Choice_square.png"
+  <img src="/assets/space-beamsplitter.jpg"
     alt="Delayed-choice experiment between Earth and a satellite"
     style="width: 100%;">
   <figcaption style="font-size: 0.85em; text-align: center;">
-    Image credit: {% cite Vedovato2017SpaceDelayedChoice %}
-  </figcaption>
+  Extending Wheeler's delayed-choice experiment to Space.
+  {% cite Vedovato2017SpaceDelayedChoice %}
+</figcaption>
 </figure>
 
 There are multiple forms of analysis required to build out a link loss budget
@@ -44,9 +45,12 @@ by academic or commercial authors with deep knowledge.
 
 The most noteworthy relevant tools are:
 
-- [SMARTS](https://www.nrel.gov/grid/solar-resource/smarts) — A fast radiative transfer model for simulating clear-sky solar spectral irradiance at Earth’s surface. {% cite Gueymard1995SMARTS2 %}
-- [libRadtran](https://www.libradtran.org/) — An open-source library and toolkit for radiative transfer calculations in the atmosphere. {% cite Mayer2005libRadtran Emde2016libRadtran %}
-- [MODTRAN](https://modtran.spectral.com/) — A widely used atmospheric radiative transfer model for simulating transmission, emission, and scattering across the spectrum. {% cite Berk2014MODTRAN6 %}
+- [SMARTS](https://www.nrel.gov/grid/solar-resource/smarts) — A fast clear-sky radiative transfer model focused on
+spectral irradiance at Earth’s surface. {% cite Gueymard1995SMARTS2 %}
+- [libRadtran](https://www.libradtran.org/) — A more flexible, general-purpose open-source toolkit for atmospheric
+radiative transfer calculations. {% cite Mayer2005libRadtran Emde2016libRadtran %}
+- [MODTRAN](https://modtran.spectral.com/) — A commercial radiative transfer model widely used in industry and
+government for transmission, emission, and scattering calculations. {% cite Berk2014MODTRAN6 %}
 
 
 MODTRAN is a commercial package, while
