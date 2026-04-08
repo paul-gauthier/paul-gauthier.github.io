@@ -8,6 +8,15 @@
     <style>
       :root {
         color-scheme: light dark;
+        --link-color: #355c8a;
+        --visited-link-color: #7b5f8f;
+      }
+
+      @media (prefers-color-scheme: dark) {
+        :root {
+          --link-color: #8fb8e8;
+          --visited-link-color: #c9acd9;
+        }
       }
 
       body {
@@ -34,11 +43,11 @@
       }
 
       a {
-        color: #0b5cab;
+        color: var(--link-color);
       }
 
       a:visited {
-        color: #6a4aa1;
+        color: var(--visited-link-color);
       }
 
       a:hover,
