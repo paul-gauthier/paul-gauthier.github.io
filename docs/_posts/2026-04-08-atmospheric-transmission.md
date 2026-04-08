@@ -11,7 +11,7 @@ The world's biggest
 {% cite Ma_2013 %}
 sent entangled photons 144 km between two of the Canary Islands.
 While a
-[delayed-choice experiment between Earth and a satellite](https://quantumfuture.dei.unipd.it/2017/04/28/extending-wheelers-delayed-choice-experiment-to-space/) sent entangled photons to LEO and back.
+[delayed-choice experiment](https://quantumfuture.dei.unipd.it/2017/04/28/extending-wheelers-delayed-choice-experiment-to-space/) sent entangled photons to LEO and back.
 {% cite Vedovato2017SpaceDelayedChoice %}.
 
 <figure style="float: right; max-width: 40%; margin: 0 0 1em 1em;">
