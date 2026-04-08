@@ -1,0 +1,24 @@
+title: Personal blog
+description: Personal blog and imported writing
+permalink: /:year/:month/:day/:title.html
+markdown: kramdown
+
+exclude:
+  - vendor
+  - tmp
+  - tmp*
+
+defaults:
+  - scope:
+      path: ""
+      type: "posts"
+    values:
+      layout: post
+  - scope:
+      path: "_posts/aider"
+      type: "posts"
+    values:
+      layout: post
+      imported_from: aider
+      original_site: https://aider.chat
+      original_blog_home: https://aider.chat/blog/
