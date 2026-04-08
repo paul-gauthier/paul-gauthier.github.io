@@ -22,10 +22,3 @@ defaults:
       imported_from: aider
       original_site: https://aider.chat
       original_blog_home: https://aider.chat/blog/
-  - scope:
-      path: "_posts/hn"
-      type: "posts"
-    values:
-      layout: post
-      imported_from: hn
-      original_site: https://news.ycombinator.com

@@ -102,18 +102,17 @@
         <a href="{{ '/' | relative_url }}" class="site-title">{{ site.title }}</a>
       </header>
 
-      {% if page.imported_from == "aider" or page.imported_from == "hn" %}
+      {% if page.imported_from == "aider" %}
         {% if page.canonical_url %}
           {% assign original_url = page.canonical_url %}
         {% else %}
           {% assign original_url = page.url | prepend: page.original_site %}
         {% endif %}
         <aside class="origin-note">
-          {% if page.imported_from == "aider" %}
-            This article was <a href="{{ original_url }}">originally published on the aider blog</a>.
-          {% elsif page.imported_from == "hn" %}
-            This article was <a href="{{ original_url }}">originally posted on Hacker News</a>.
-          {% endif %}
+          This article was 
+            <a href="{{ original_url }}">
+                originally published on the aider blog</a>.
+            
         </aside>
       {% endif %}
 
