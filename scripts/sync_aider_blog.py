@@ -76,7 +76,7 @@ def main() -> None:
     parser.add_argument(
         "dest",
         nargs="?",
-        default="_posts/aider",
+        default="docs/_posts/aider",
         help="Destination directory for imported posts.",
     )
     args = parser.parse_args()

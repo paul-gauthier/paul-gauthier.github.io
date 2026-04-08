@@ -4,8 +4,9 @@ FROM bretfisher/jekyll-serve
 # Set the working directory
 WORKDIR /site
 
-# Copy the current directory contents into the container at /srv/jekyll
-COPY docs /site
+# Copy the files needed to build the site
+COPY Gemfile /site/
+COPY docs /site/docs
 
 RUN apt-get update && apt-get install libcurl4
 
@@ -14,7 +15,7 @@ RUN bundle install --retry 5 --jobs 20
 
 ENTRYPOINT [ "docker-entrypoint.sh" ]
 
-# bundle exec jekyll serve --force_polling -H 0.0.0.0 -P 4000
-CMD [ "bundle", "exec", "jekyll", "serve", "--verbose", "--trace", "--force_polling", "-H", "0.0.0.0", "-P", "4000" ]
+# bundle exec jekyll serve --source docs --config docs/_config.yml --force_polling -H 0.0.0.0 -P 4000
+CMD [ "bundle", "exec", "jekyll", "serve", "--source", "docs", "--config", "docs/_config.yml", "--verbose", "--trace", "--force_polling", "-H", "0.0.0.0", "-P", "4000" ]
 
 
