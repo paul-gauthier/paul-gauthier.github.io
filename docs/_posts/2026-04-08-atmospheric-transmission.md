@@ -18,9 +18,14 @@ A
 [delayed-choice experiment between Earth and a satellite](https://quantumfuture.dei.unipd.it/2017/04/28/extending-wheelers-delayed-choice-experiment-to-space/?utm_source=chatgpt.com) mixed both of those concepts together
 {% cite Vedovato2017SpaceDelayedChoice %}.
 
-<img src="https://quantumfuture.dei.unipd.it/wp-content/uploads/2017/04/Delayed_Choice_square.png"
-  alt="Delayed-choice experiment between Earth and a satellite"
-  style="float: right; max-width: 40%; margin: 0 0 1em 1em;">
+<figure style="float: right; max-width: 40%; margin: 0 0 1em 1em;">
+  <img src="https://quantumfuture.dei.unipd.it/wp-content/uploads/2017/04/Delayed_Choice_square.png"
+    alt="Delayed-choice experiment between Earth and a satellite"
+    style="width: 100%;">
+  <figcaption style="font-size: 0.85em; text-align: center;">
+    Image credit: {% cite Vedovato2017SpaceDelayedChoice %}
+  </figcaption>
+</figure>
 
 There are multiple forms of analysis required to build out a link loss budget
 for such an effort.
