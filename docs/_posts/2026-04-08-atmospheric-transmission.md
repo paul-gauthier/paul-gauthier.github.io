@@ -10,8 +10,8 @@ The world's biggest
 [delayed-choice quantum eraser experiment](https://arstechnica.com/science/2013/01/quantum-measurements-on-one-island-determine-behavior-on-another/)
 {% cite Ma_2013 %}
 sent entangled photons 144 km between two of the Canary Islands.
-While a
-[delayed-choice experiment](https://quantumfuture.dei.unipd.it/2017/04/28/extending-wheelers-delayed-choice-experiment-to-space/) sent entangled photons to LEO and back.
+While a version of
+[Wheeler's delayed-choice experiment](https://quantumfuture.dei.unipd.it/2017/04/28/extending-wheelers-delayed-choice-experiment-to-space/) sent entangled photons to LEO and back.
 {% cite Vedovato2017SpaceDelayedChoice %}.
 
 <figure style="float: right; max-width: 40%; margin: 0 0 1em 1em;">
