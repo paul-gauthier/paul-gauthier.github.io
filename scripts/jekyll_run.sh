@@ -1,6 +1,19 @@
 #!/bin/bash
 
-(sleep 2; echo; echo; echo Local site: http://localhost:4000; echo; open http://localhost:4000) &
+(
+  until curl -fsS http://localhost:4000 >/dev/null 2>&1; do
+    sleep 0.5
+  done
+
+  echo
+  echo
+  echo Local site: http://localhost:4000
+  echo
+  open http://localhost:4000
+) &
+poller_pid=$!
+
+trap 'kill "$poller_pid" 2>/dev/null || true' EXIT
 
 # Run the Docker container with optimizations for faster builds
 docker run \
