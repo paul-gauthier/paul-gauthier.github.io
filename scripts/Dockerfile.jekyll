@@ -6,7 +6,6 @@ WORKDIR /site
 
 # Copy the files needed to build the site
 COPY Gemfile /site/
-COPY Gemfile.lock /site/
 COPY docs /site/docs
 
 RUN apt-get update && apt-get install libcurl4
