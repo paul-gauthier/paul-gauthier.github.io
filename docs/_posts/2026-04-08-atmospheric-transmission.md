@@ -1,5 +1,5 @@
 ---
-title: Tools for modeling atmospheric transmission
+title: Dockerized SMARTS and libRadtran for radiative transfer
 date: 2026-04-08
 ---
 
@@ -7,26 +7,27 @@ Researchers have sent entangled single photons over very long distances to
 conduct some impressive experiments,
 typically involving the non-local nature of quantum mechanics.
 The world's biggest
-[delayed-choice quantum eraser experiment](https://arstechnica.com/science/2013/01/quantum-measurements-on-one-island-determine-behavior-on-another/?utm_source=chatgpt.com)
+[delayed-choice quantum eraser experiment](https://arstechnica.com/science/2013/01/quantum-measurements-on-one-island-determine-behavior-on-another/)
 {% cite Ma_2013 %}
-sent entangled photons 1,200 km between two of the Canary Islands.
+sent entangled photons 144 km between two of the Canary Islands.
 Another group
-[sent entangled photons back-and-forth between the Earth and a quantum satellite](https://www.sciencedaily.com/releases/2017/06/170615142831.htm?utm_source=chatgpt.com).
+[sent entangled photons 1,200 km](https://www.sciencedaily.com/releases/2017/06/170615142831.htm)
+back-and-forth between the Earth and a quantum satellite]
 {% cite yin2017satellitebasedentanglementdistribution1200 %}
 
 There are multiple forms of analysis required to build out a link loss budget
 for such an effort.
-One important piece is determining out what fraction of your photons will scatter or be absorbed
+One important piece is determining what fraction of your photons will scatter or be absorbed
 in the atmosphere.
-I've recently be trying to do this sort of analysis, and tried it a few ways.
+I've recently been doing this sort of analysis, and tried it a few ways.
 It's relatively easy to get a rough transmission estimate by
 building an ad-hoc transmission model of the effects of Rayleigh scattering,
-the aerosol and molecular content of the air (water, Oxygen), clouds, etc.
+the aerosol and molecular content of the air (water, oxygen), clouds, etc.
 
-A far more reliable approach is to use an existing 
+A more reliable and comprehensive approach is to use an existing 
 software package designed to model
 radiative transfer.
-This has the advantage of being well researched and battle tested
+This has the advantage of being well researched and battle-tested
 by academic or commercial authors with deep knowledge.
 
 The most noteworthy relevant tools are:
