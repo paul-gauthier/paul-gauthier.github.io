@@ -3,6 +3,8 @@ title: Dockerized libRadtran and SMARTS for radiative transfer
 date: 2026-04-08
 ---
 
+### Atmospheric transmission
+
 Researchers have sent entangled single photons over very long distances to
 conduct some impressive experiments,
 typically to explore the non-local nature of quantum mechanics.
@@ -37,6 +39,8 @@ It's relatively easy to get a rough transmission estimate by
 building an ad-hoc model of the effects of Rayleigh scattering,
 the aerosol and molecular content of the air (water, oxygen), clouds, etc.
 
+### Radiative transfer tools
+
 A more reliable and comprehensive approach is to use an existing 
 software package designed to model
 radiative transfer.
@@ -51,6 +55,8 @@ government for transmission, emission, and scattering calculations. {% cite Berk
 radiative transfer calculations. {% cite Mayer2005libRadtran Emde2016libRadtran %}
 - [SMARTS](https://www.nrel.gov/grid/solar-resource/smarts) — A fast clear-sky radiative transfer model focused on
 spectral irradiance at Earth’s surface. {% cite Gueymard1995SMARTS2 %}
+
+### Docker images
 
 MODTRAN is a commercial package, while
 libRadtran and SMARTS
