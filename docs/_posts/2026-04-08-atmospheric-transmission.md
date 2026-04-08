@@ -36,7 +36,7 @@ by academic or commercial authors with deep knowledge.
 The most noteworthy relevant tools are:
 
 - [SMARTS](https://www.nrel.gov/grid/solar-resource/smarts) — A fast radiative transfer model for simulating clear-sky solar spectral irradiance at Earth’s surface.
-- [libRadtran](https://www.libradtran.org/) — An open-source library and toolkit for radiative transfer calculations in the atmosphere.
+- [libRadtran](https://www.libradtran.org/) — An open-source library and toolkit for radiative transfer calculations in the atmosphere. {% cite Mayer2005libRadtran Emde2016libRadtran %}
 - [MODTRAN](https://modtran.spectral.com/) — A widely used atmospheric radiative transfer model for simulating transmission, emission, and scattering across the spectrum.
 
 
