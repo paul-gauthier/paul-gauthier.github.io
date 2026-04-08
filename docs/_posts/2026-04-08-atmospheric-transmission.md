@@ -18,6 +18,8 @@ A
 [delayed-choice experiment between Earth and a satellite](https://quantumfuture.dei.unipd.it/2017/04/28/extending-wheelers-delayed-choice-experiment-to-space/?utm_source=chatgpt.com) mixed both of those concepts together
 {% cite Vedovato2017SpaceDelayedChoice %}.
 
+![Delayed-choice experiment between Earth and a satellite](https://quantumfuture.dei.unipd.it/wp-content/uploads/2017/04/Delayed_Choice_square.png)
+
 There are multiple forms of analysis required to build out a link loss budget
 for such an effort.
 One important piece is determining what fraction of your photons will scatter or be absorbed
