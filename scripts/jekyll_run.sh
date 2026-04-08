@@ -20,10 +20,11 @@ docker run \
        --rm \
        -v "$PWD:/site" \
        -p 4000:4000 \
+       -p 35729:35729 \
        -e HISTFILE=/site/.bash_history \
        -e JEKYLL_ENV=development \
        -it \
-       paulg-info-jekyll bundle exec jekyll serve --source docs --config docs/_config.yml --host 0.0.0.0 "$@"
+       paulg-info-jekyll bundle exec jekyll serve --source docs --config docs/_config.yml --host 0.0.0.0 --force_polling --livereload "$@"
 
 # Additional options:
 # --incremental: Only rebuilds files that changed
