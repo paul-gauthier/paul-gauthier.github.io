@@ -11,6 +11,7 @@ docker run \
        -w /site \
        -u "$(id -u):$(id -g)" \
        -e HOME=/tmp \
+       -e BUNDLE_APP_CONFIG=/tmp/.bundle \
        -it \
        paulg-info-jekyll \
        "$@"

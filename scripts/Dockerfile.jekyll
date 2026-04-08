@@ -9,9 +9,10 @@ COPY Gemfile /site/
 COPY Gemfile.lock /site/
 
 RUN apt-get update && apt-get install libcurl4
+RUN gem install bundler -v 2.3.27
 
 # Install any needed packages specified in Gemfile
-RUN bundle install --retry 5 --jobs 20
+RUN bundle _2.3.27_ install --retry 5 --jobs 20
 
 COPY docs /site/docs
 
