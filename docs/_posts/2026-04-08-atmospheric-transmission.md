@@ -15,7 +15,7 @@ Another group
 back-and-forth between the Earth and a quantum satellite
 {% cite yin2017satellitebasedentanglementdistribution1200 %}
 A
-[delayed-choice experiment between Earth and a satellite](https://quantumfuture.dei.unipd.it/2017/04/28/extending-wheelers-delayed-choice-experiment-to-space/?utm_source=chatgpt.com) mixed both of those concepts together
+[delayed-choice experiment between Earth and a satellite](https://quantumfuture.dei.unipd.it/2017/04/28/extending-wheelers-delayed-choice-experiment-to-space/) mixed both of those concepts together
 {% cite Vedovato2017SpaceDelayedChoice %}.
 
 <figure style="float: right; max-width: 40%; margin: 0 0 1em 1em;">
