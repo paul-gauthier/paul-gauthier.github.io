@@ -45,8 +45,8 @@ I spent a few hours bashing them into Docker containers and published
 the recipes to GitHub.
 Hopefully this saves others some time and frustration in the future.
 
-- https://github.com/paul-gauthier/smarts-docker
-- https://github.com/paul-gauthier/libRadtran-docker
+- [smarts-docker](https://github.com/paul-gauthier/smarts-docker)
+- [libRadtran-docker](https://github.com/paul-gauthier/libRadtran-docker)
 
 
 ### References
