@@ -15,7 +15,40 @@ layout: default
     </header>
   {% endunless %}
 
+  {% assign rendered_content = content %}
+  {% if page.imported_from == "aider" %}
+    {% assign aider_assets = page.original_site | append: "/assets/" %}
+    {% assign src_double = 'src="/assets/' %}
+    {% assign src_double_replacement = 'src="' | append: aider_assets %}
+    {% assign src_single = "src='/assets/" %}
+    {% assign src_single_replacement = "src='" | append: aider_assets %}
+    {% assign href_double = 'href="/assets/' %}
+    {% assign href_double_replacement = 'href="' | append: aider_assets %}
+    {% assign href_single = "href='/assets/" %}
+    {% assign href_single_replacement = "href='" | append: aider_assets %}
+    {% assign poster_double = 'poster="/assets/' %}
+    {% assign poster_double_replacement = 'poster="' | append: aider_assets %}
+    {% assign poster_single = "poster='/assets/" %}
+    {% assign poster_single_replacement = "poster='" | append: aider_assets %}
+    {% assign css_url = 'url(/assets/' %}
+    {% assign css_url_replacement = 'url(' | append: aider_assets %}
+    {% assign css_url_double = 'url("/assets/' %}
+    {% assign css_url_double_replacement = 'url("' | append: aider_assets %}
+    {% assign css_url_single = "url('/assets/" %}
+    {% assign css_url_single_replacement = "url('" | append: aider_assets %}
+    {% assign rendered_content = rendered_content
+      | replace: src_double, src_double_replacement
+      | replace: src_single, src_single_replacement
+      | replace: href_double, href_double_replacement
+      | replace: href_single, href_single_replacement
+      | replace: poster_double, poster_double_replacement
+      | replace: poster_single, poster_single_replacement
+      | replace: css_url, css_url_replacement
+      | replace: css_url_double, css_url_double_replacement
+      | replace: css_url_single, css_url_single_replacement %}
+  {% endif %}
+
   <div class="post-content">
-    {{ content }}
+    {{ rendered_content }}
   </div>
 </article>
