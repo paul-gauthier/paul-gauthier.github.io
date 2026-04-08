@@ -3,6 +3,15 @@ title: Notes by Paul Gauthier
 permalink: /:year/:month/:day/:title.html
 markdown: kramdown
 
+plugins:
+  - jekyll-scholar
+
+scholar:
+  style: apa
+  locale: en
+  source: ./_bibliography
+  bibliography: references.bib
+
 exclude:
   - vendor
   - tmp
