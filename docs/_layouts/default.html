@@ -22,6 +22,17 @@
         padding: 2rem 1.25rem 4rem;
       }
 
+      .site-header {
+        margin-bottom: 2rem;
+      }
+
+      .site-title {
+        color: inherit;
+        font-size: 1.125rem;
+        font-weight: 600;
+        text-decoration: none;
+      }
+
       .origin-note {
         margin-bottom: 2rem;
         padding: 1rem 1.25rem;
@@ -47,6 +58,10 @@
   </head>
   <body>
     <main class="page">
+      <header class="site-header">
+        <a href="{{ '/' | relative_url }}" class="site-title">{{ site.title }}</a>
+      </header>
+
       {% if page.imported_from == "aider" %}
         {% if page.canonical_url %}
           {% assign original_url = page.canonical_url %}
