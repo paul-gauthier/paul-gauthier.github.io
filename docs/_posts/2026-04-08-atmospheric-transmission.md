@@ -14,8 +14,8 @@ Another group
 [sent entangled photons 1,200 km](https://www.sciencedaily.com/releases/2017/06/170615142831.htm)
 back-and-forth between the Earth and a quantum satellite
 {% cite yin2017satellitebasedentanglementdistribution1200 %}
-Or mix both concepts together to get a
-[delayed-choice experiment between Earth and a satellite](https://quantumfuture.dei.unipd.it/2017/04/28/extending-wheelers-delayed-choice-experiment-to-space/?utm_source=chatgpt.com)
+A
+[delayed-choice experiment between Earth and a satellite](https://quantumfuture.dei.unipd.it/2017/04/28/extending-wheelers-delayed-choice-experiment-to-space/?utm_source=chatgpt.com) mixed both of those concepts together
 {% cite Vedovato2017SpaceDelayedChoice %}.
 
 There are multiple forms of analysis required to build out a link loss budget
