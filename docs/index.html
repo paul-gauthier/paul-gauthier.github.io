@@ -11,16 +11,12 @@ title: Home
 </section>
 
 <section class="home-posts">
-  <h2>Latest posts</h2>
   <ul>
     {% for post in site.posts %}
       <li>
         <a href="{{ post.url }}">{{ post.title }}</a>
         {% if post.date %}
           <small>— {{ post.date | date: "%B %-d, %Y" }}</small>
-        {% endif %}
-        {% if post.imported_from == "aider" %}
-          <em>(Imported from aider)</em>
         {% endif %}
       </li>
     {% endfor %}
