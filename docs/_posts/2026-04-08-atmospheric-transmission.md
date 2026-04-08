@@ -45,16 +45,16 @@ by academic or commercial authors with deep knowledge.
 
 The most noteworthy relevant tools are:
 
-- [SMARTS](https://www.nrel.gov/grid/solar-resource/smarts) — A fast clear-sky radiative transfer model focused on
-spectral irradiance at Earth’s surface. {% cite Gueymard1995SMARTS2 %}
-- [libRadtran](https://www.libradtran.org/) — A more flexible, general-purpose open-source toolkit for atmospheric
-radiative transfer calculations. {% cite Mayer2005libRadtran Emde2016libRadtran %}
 - [MODTRAN](https://modtran.spectral.com/) — A commercial radiative transfer model widely used in industry and
 government for transmission, emission, and scattering calculations. {% cite Berk2014MODTRAN6 %}
-
+- [libRadtran](https://www.libradtran.org/) — A more flexible, general-purpose open-source toolkit for atmospheric
+radiative transfer calculations. {% cite Mayer2005libRadtran Emde2016libRadtran %}
+- [SMARTS](https://www.nrel.gov/grid/solar-resource/smarts) — A fast clear-sky radiative transfer model focused on
+spectral irradiance at Earth’s surface. {% cite Gueymard1995SMARTS2 %}
 
 MODTRAN is a commercial package, while
-SMARTS and libRadtran are freely available.
+libRadtran and SMARTS
+are freely available.
 The free tools are both based on FORTRAN scientific code bases,
 and aren't what you might call "easy to install".
 
@@ -62,8 +62,8 @@ I spent a few hours bashing them into Docker containers and published
 the recipes to GitHub.
 Hopefully this saves others some time and frustration in the future.
 
-- [smarts-docker](https://github.com/paul-gauthier/smarts-docker)
 - [libRadtran-docker](https://github.com/paul-gauthier/libRadtran-docker)
+- [smarts-docker](https://github.com/paul-gauthier/smarts-docker)
 
 
 ### References
