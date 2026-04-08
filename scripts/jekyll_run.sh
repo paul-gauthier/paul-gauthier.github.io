@@ -1,5 +1,7 @@
 #!/bin/bash
 
+(sleep 1; echo; echo; echo Local site: http://localhost:4000; echo; open http://localhost:4000) &
+
 # Run the Docker container with optimizations for faster builds
 docker run \
        --rm \
@@ -13,4 +15,5 @@ docker run \
 # Additional options:
 # --incremental: Only rebuilds files that changed
 # --livereload: Auto-refreshes browser when content changes
+
 
