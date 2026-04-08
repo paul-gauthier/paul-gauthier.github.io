@@ -1,5 +1,5 @@
 ---
-title: Dockerized SMARTS and libRadtran for radiative transfer
+title: Dockerized libRadtran and SMARTS for radiative transfer
 date: 2026-04-08
 ---
 
