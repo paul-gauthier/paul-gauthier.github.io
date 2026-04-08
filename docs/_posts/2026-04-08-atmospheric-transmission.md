@@ -5,14 +5,14 @@ date: 2026-04-08
 
 Researchers have sent entangled single photons over very long distances to
 conduct some impressive experiments,
-typically involving the non-local nature of quantum mechanics.
+typically to explore the non-local nature of quantum mechanics.
 The world's biggest
 [delayed-choice quantum eraser experiment](https://arstechnica.com/science/2013/01/quantum-measurements-on-one-island-determine-behavior-on-another/)
 {% cite Ma_2013 %}
 sent entangled photons 144 km between two of the Canary Islands.
 Another group
 [sent entangled photons 1,200 km](https://www.sciencedaily.com/releases/2017/06/170615142831.htm)
-back-and-forth between the Earth and a quantum satellite
+between two Earth stations using a quantum satellite
 {% cite yin2017satellitebasedentanglementdistribution1200 %}
 A
 [delayed-choice experiment between Earth and a satellite](https://quantumfuture.dei.unipd.it/2017/04/28/extending-wheelers-delayed-choice-experiment-to-space/) mixed both of those concepts together
@@ -28,9 +28,9 @@ A
 </figcaption>
 </figure>
 
-There are multiple forms of analysis required to build out a link loss budget
+There are multiple forms of analysis required to build out a link budget
 for such an effort.
-One important piece is determining what fraction of your photons will scatter or be absorbed
+One important component is the fraction of your photons that will scatter or be absorbed
 in the atmosphere.
 I've recently been doing this sort of analysis, and tried it a few ways.
 It's relatively easy to get a rough transmission estimate by
