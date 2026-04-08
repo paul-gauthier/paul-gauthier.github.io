@@ -2,6 +2,8 @@ title: Notes by Paul Gauthier
 #description: Personal blog and imported writing
 permalink: /:year/:month/:day/:title.html
 markdown: kramdown
+url: "https://paulg.info"
+baseurl: ""
 
 plugins:
   - jekyll-scholar
