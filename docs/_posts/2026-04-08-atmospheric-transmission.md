@@ -3,8 +3,6 @@ title: Dockerized libRadtran and SMARTS for radiative transfer
 date: 2026-04-08
 ---
 
-### Atmospheric transmission
-
 Researchers have sent entangled single photons over very long distances to
 conduct some impressive experiments,
 typically to explore the non-local nature of quantum mechanics.
@@ -12,12 +10,8 @@ The world's biggest
 [delayed-choice quantum eraser experiment](https://arstechnica.com/science/2013/01/quantum-measurements-on-one-island-determine-behavior-on-another/)
 {% cite Ma_2013 %}
 sent entangled photons 144 km between two of the Canary Islands.
-Another group
-[sent entangled photons 1,200 km](https://www.sciencedaily.com/releases/2017/06/170615142831.htm)
-between two Earth stations using a quantum satellite
-{% cite yin2017satellitebasedentanglementdistribution1200 %}
-A
-[delayed-choice experiment between Earth and a satellite](https://quantumfuture.dei.unipd.it/2017/04/28/extending-wheelers-delayed-choice-experiment-to-space/) mixed both of those concepts together
+While a
+[delayed-choice experiment between Earth and a satellite](https://quantumfuture.dei.unipd.it/2017/04/28/extending-wheelers-delayed-choice-experiment-to-space/) sent entangled photons to LEO and back.
 {% cite Vedovato2017SpaceDelayedChoice %}.
 
 <figure style="float: right; max-width: 40%; margin: 0 0 1em 1em;">
@@ -29,6 +23,8 @@ A
   {% cite Vedovato2017SpaceDelayedChoice %}
 </figcaption>
 </figure>
+
+### Atmospheric transmission
 
 There are multiple forms of analysis required to build out a link budget
 for such an effort.
