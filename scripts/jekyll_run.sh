@@ -1,6 +1,6 @@
 #!/bin/bash
 
-(sleep 1; echo; echo; echo Local site: http://localhost:4000; echo; open http://localhost:4000) &
+(sleep 2; echo; echo; echo Local site: http://localhost:4000; echo; open http://localhost:4000) &
 
 # Run the Docker container with optimizations for faster builds
 docker run \
