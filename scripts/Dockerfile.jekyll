@@ -10,6 +10,9 @@ COPY Gemfile.lock /site/
 
 RUN apt-get update && apt-get install libcurl4
 
+# Update bundler to a newer version
+RUN gem install bundler
+
 # Install any needed packages specified in Gemfile
 RUN bundle install --retry 5 --jobs 20
 
