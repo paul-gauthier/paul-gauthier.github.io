@@ -31,7 +31,7 @@ for such an effort.
 One important component is the fraction of your photons that will scatter or be absorbed
 in the atmosphere.
 I've recently been doing this sort of analysis, and tried it a few ways.
-It's relatively easy to get a rough transmission estimate by
+It's straightforward to compute a rough transmission estimate by
 building an ad-hoc model of the effects of Rayleigh scattering,
 the aerosol and molecular content of the air (water, oxygen), clouds, etc.
 
