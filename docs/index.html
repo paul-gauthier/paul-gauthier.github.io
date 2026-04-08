@@ -3,13 +3,6 @@ layout: default
 title: Home
 ---
 
-<section class="home-intro">
-  <h1>{{ site.title }}</h1>
-  {% if site.description %}
-    <p>{{ site.description }}</p>
-  {% endif %}
-</section>
-
 <section class="home-posts">
   <ul>
     {% for post in site.posts %}

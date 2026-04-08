@@ -1,5 +1,5 @@
-title: Personal blog
-description: Personal blog and imported writing
+title: Notes by Paul Gauthier
+#description: Personal blog and imported writing
 permalink: /:year/:month/:day/:title.html
 markdown: kramdown
 
