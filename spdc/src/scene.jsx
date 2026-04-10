@@ -215,16 +215,24 @@ function Fit2DCamera({ board, enabled, controlsRef, topInsetPx = 0 }) {
   return null
 }
 
-function Fit3DCamera({ board, enabled, controlsRef, savedView, sceneBounds }) {
+function Fit3DCamera({ board, enabled, controlsRef, savedView, sceneBounds, resetKey }) {
   const { camera, size } = useThree()
+  const hasInitializedViewRef = useRef(false)
+
+  useEffect(() => {
+    hasInitializedViewRef.current = false
+  }, [resetKey])
 
   useEffect(() => {
     if (!enabled || !camera.isPerspectiveCamera || size.width === 0 || size.height === 0) return
+
+    if (hasInitializedViewRef.current) return
 
     if (savedView?.position && savedView?.target) {
       camera.position.fromArray(savedView.position)
       camera.near = 0.1
       camera.updateProjectionMatrix()
+      hasInitializedViewRef.current = true
 
       if (controlsRef.current) {
         controlsRef.current.target.fromArray(savedView.target)
@@ -278,6 +286,7 @@ function Fit3DCamera({ board, enabled, controlsRef, savedView, sceneBounds }) {
     camera.near = 0.1
     camera.far = Math.max(100, distance + projectedHalfDepth + 20)
     camera.updateProjectionMatrix()
+    hasInitializedViewRef.current = true
 
     if (controlsRef.current) {
       controlsRef.current.target.copy(target)
@@ -286,7 +295,7 @@ function Fit3DCamera({ board, enabled, controlsRef, savedView, sceneBounds }) {
     }
 
     camera.lookAt(target)
-  }, [board, camera, controlsRef, enabled, savedView, sceneBounds, size.height, size.width])
+  }, [board, camera, controlsRef, enabled, resetKey, savedView, sceneBounds, size.height, size.width])
 
   return null
 }
@@ -449,6 +458,7 @@ export function OpticalScene({
         controlsRef={controlsRef}
         savedView={saved3DView}
         sceneBounds={sceneBounds}
+        resetKey={level}
       />
       <Table board={board} />
       <BreadboardHoles board={board} />
