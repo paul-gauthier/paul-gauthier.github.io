@@ -37,6 +37,9 @@ jobs:
         run: npm run build
         working-directory: spdc
 
+      - name: Write spdc asset version
+        run: mkdir -p docs/_data && printf '{"version":"%s"}\n' "$GITHUB_SHA" > docs/_data/spdc_build.json
+
       - name: Set up Ruby
         uses: ruby/setup-ruby@v1
         with:
