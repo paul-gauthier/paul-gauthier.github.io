@@ -181,6 +181,15 @@ export default function App({ levelId = DEFAULT_LEVEL_ID }) {
     )
   }, [level])
 
+  const fullscreenButtonLabel = isNativeFullscreen
+    ? 'Exit fullscreen'
+    : isExpandedFallback
+      ? 'Collapse'
+      : nativeFullscreenSupported
+        ? 'Fullscreen'
+        : 'Expand'
+  const fullscreenButtonIcon = isNativeFullscreen || isExpandedFallback ? '🗗' : '⛶'
+
   return (
     <div
       ref={containerRef}
@@ -302,6 +311,8 @@ export default function App({ levelId = DEFAULT_LEVEL_ID }) {
           </button>
           <button
             onClick={handleToggleFullscreen}
+            title={fullscreenButtonLabel}
+            aria-label={fullscreenButtonLabel}
             style={{
               ...baseControlStyle,
               cursor: 'pointer',
@@ -310,13 +321,7 @@ export default function App({ levelId = DEFAULT_LEVEL_ID }) {
               WebkitAppearance: 'none',
             }}
           >
-            {isNativeFullscreen
-              ? 'Exit fullscreen'
-              : isExpandedFallback
-                ? 'Collapse'
-                : nativeFullscreenSupported
-                  ? 'Fullscreen'
-                  : 'Expand'}
+            {fullscreenButtonIcon}
           </button>
         </div>
       </div>
