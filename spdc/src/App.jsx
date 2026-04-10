@@ -263,7 +263,7 @@ export default function App({ levelId = DEFAULT_LEVEL_ID }) {
           display: 'flex',
           justifyContent: 'flex-end',
           alignItems: 'flex-start',
-          zIndex: 10,
+          zIndex: 2147483647,
         }}
       >
         <div
@@ -337,6 +337,8 @@ export default function App({ levelId = DEFAULT_LEVEL_ID }) {
           gap: 8,
           flexWrap: 'wrap',
           boxSizing: 'border-box',
+          position: 'relative',
+          zIndex: 2147483647,
         }}
       >
         {fiberMeters.map((meter) => {
