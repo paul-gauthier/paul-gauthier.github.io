@@ -499,7 +499,7 @@ export function OpticalScene({
         ref={controlsRef}
         makeDefault
         autoRotate={!is2D && !hasUserInteracted3D}
-        autoRotateSpeed={-0.75}
+        autoRotateSpeed={-1.25}
         enabled={!isDragging}
         onStart={() => {
           if (!is2D) onFirst3DInteraction?.()
