@@ -47,7 +47,7 @@ export const level1 = {
 
 export const level2 = {
   board: {
-    holesX: 11,
+    holesX: 12,
     holesY: 6,
     pitch: 1,
   },
