@@ -143,13 +143,14 @@ function FiberPigtail() {
   const curve = useMemo(() => {
     const horizontalLength = 0.18
     const bendRadius = 0.12
-    const verticalLength = 1
+    const cableRadius = 0.024
+    const tableClearance = cableRadius + 0.005
     const k = 0.5522847498
 
     const start = new THREE.Vector3(FIBER_LENGTH / 2 + 0.015, 0, 0)
     const straightEnd = new THREE.Vector3(start.x + horizontalLength, 0, 0)
     const bendEnd = new THREE.Vector3(straightEnd.x + bendRadius, -bendRadius, 0)
-    const end = new THREE.Vector3(bendEnd.x, bendEnd.y - verticalLength, 0)
+    const end = new THREE.Vector3(bendEnd.x, -POST_HEIGHT + tableClearance, 0)
 
     const path = new THREE.CurvePath()
     path.add(new THREE.LineCurve3(start, straightEnd))
