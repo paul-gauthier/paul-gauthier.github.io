@@ -149,11 +149,11 @@ export default function App({ levelId = DEFAULT_LEVEL_ID }) {
               return [meter.id, 0]
             }
 
-            const amplitude = Math.min(0.015, Math.max(0.003, coupling * 0.05))
+            const amplitude = Math.min(0.022, Math.max(0.0045, coupling * 0.07))
             const target = clamp01(coupling + (Math.random() * 2 - 1) * amplitude)
             const previous = current[meter.id] ?? coupling
 
-            return [meter.id, previous + (target - previous) * 0.35]
+            return [meter.id, previous + (target - previous) * 0.45]
           }),
         ),
       )
