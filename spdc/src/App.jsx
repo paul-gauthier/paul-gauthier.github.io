@@ -5,7 +5,7 @@ import { OpticalScene } from './scene'
 
 const DEFAULT_LEVEL_ID = 'level2'
 const CONTROL_HEIGHT = 32
-const TWO_D_TOP_UI_INSET = 32
+const TOP_CONTROL_BAR_HEIGHT = CONTROL_HEIGHT + 24
 const POWER_METER_BAR_HEIGHT = 56
 const EMBED_ASPECT_RATIO = 1.3
 
@@ -197,7 +197,6 @@ export default function App({ levelId = DEFAULT_LEVEL_ID }) {
       style={{
         width: isExpandedFallback ? '100vw' : '100%',
         height: isFullscreen ? '100dvh' : undefined,
-        aspectRatio: isFullscreen ? undefined : EMBED_ASPECT_RATIO,
         position: isExpandedFallback ? 'fixed' : 'relative',
         inset: isExpandedFallback ? 0 : undefined,
         zIndex: isExpandedFallback ? 2147483647 : undefined,
@@ -218,51 +217,13 @@ export default function App({ levelId = DEFAULT_LEVEL_ID }) {
     >
       <div
         style={{
-          position: 'relative',
-          flex: 1,
-          minHeight: 0,
-        }}
-      >
-        <Canvas
-        key={is2D ? '2d' : '3d'}
-        shadows
-        orthographic={is2D}
-        camera={
-          is2D
-            ? { position: [0, 15, 0], zoom: 80, near: 0.1, far: 100 }
-            : { position: [0, 8.5, 8.5], fov: 50 }
-        }
-        dpr={[1, 2]}
-        style={{
-          touchAction: 'none',
-          userSelect: 'none',
-          WebkitUserSelect: 'none',
-          WebkitTouchCallout: 'none',
-          WebkitTapHighlightColor: 'transparent',
-        }}
-      >
-        <OpticalScene
-          is2D={is2D}
-          level={level}
-          opticYaws={opticYaws}
-          onOpticYawChange={handleOpticYawChange}
-          hasUserInteracted3D={hasUserInteracted3D}
-          onFirst3DInteraction={handleFirst3DInteraction}
-          saved3DView={saved3DViewRef.current}
-          onSave3DView={handleSave3DView}
-          topInsetPx={TWO_D_TOP_UI_INSET}
-          onFiberMetersChange={setFiberMeters}
-        />
-      </Canvas>
-      <div
-        style={{
-          position: 'absolute',
-          top: 12,
-          left: 12,
-          right: 12,
+          height: TOP_CONTROL_BAR_HEIGHT,
+          padding: '12px',
           display: 'flex',
           justifyContent: 'flex-end',
-          alignItems: 'flex-start',
+          alignItems: 'center',
+          boxSizing: 'border-box',
+          position: 'relative',
           zIndex: 2147483647,
         }}
       >
@@ -325,6 +286,47 @@ export default function App({ levelId = DEFAULT_LEVEL_ID }) {
           </button>
         </div>
       </div>
+
+      <div
+        style={{
+          position: 'relative',
+          width: '100%',
+          flex: isFullscreen ? 1 : undefined,
+          minHeight: 0,
+          aspectRatio: isFullscreen ? undefined : EMBED_ASPECT_RATIO,
+        }}
+      >
+        <Canvas
+          key={is2D ? '2d' : '3d'}
+          shadows
+          orthographic={is2D}
+          camera={
+            is2D
+              ? { position: [0, 15, 0], zoom: 80, near: 0.1, far: 100 }
+              : { position: [0, 8.5, 8.5], fov: 50 }
+          }
+          dpr={[1, 2]}
+          style={{
+            touchAction: 'none',
+            userSelect: 'none',
+            WebkitUserSelect: 'none',
+            WebkitTouchCallout: 'none',
+            WebkitTapHighlightColor: 'transparent',
+          }}
+        >
+          <OpticalScene
+            is2D={is2D}
+            level={level}
+            opticYaws={opticYaws}
+            onOpticYawChange={handleOpticYawChange}
+            hasUserInteracted3D={hasUserInteracted3D}
+            onFirst3DInteraction={handleFirst3DInteraction}
+            saved3DView={saved3DViewRef.current}
+            onSave3DView={handleSave3DView}
+            topInsetPx={0}
+            onFiberMetersChange={setFiberMeters}
+          />
+        </Canvas>
       </div>
 
       <div
