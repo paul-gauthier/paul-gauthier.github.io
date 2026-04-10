@@ -329,7 +329,7 @@ export default function App({ levelId = DEFAULT_LEVEL_ID }) {
 
       <div
         style={{
-          height: POWER_METER_BAR_HEIGHT,
+          minHeight: POWER_METER_BAR_HEIGHT,
           padding: '0 12px 12px',
           display: 'flex',
           justifyContent: 'flex-end',
@@ -347,19 +347,23 @@ export default function App({ levelId = DEFAULT_LEVEL_ID }) {
               key={meter.id}
               style={{
                 ...baseControlStyle,
-                gap: 8,
+                flex: '1 1 0',
+                minWidth: 0,
+                gap: 6,
+                padding: '0 10px',
                 whiteSpace: 'nowrap',
               }}
             >
               <span>{meter.label}</span>
               <div
                 style={{
-                  width: 64,
+                  flex: 1,
+                  minWidth: 40,
                   height: 6,
                   background: '#e5e7eb',
                   borderRadius: 999,
                   overflow: 'hidden',
-                  flexShrink: 0,
+                  flexShrink: 1,
                 }}
               >
                 <div
