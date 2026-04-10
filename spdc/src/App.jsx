@@ -7,6 +7,56 @@ const DEFAULT_LEVEL_ID = 'level2'
 const CONTROL_HEIGHT = 32
 const TWO_D_TOP_UI_INSET = 32
 const POWER_METER_BAR_HEIGHT = 56
+
+function getFullscreenElement() {
+  return document.fullscreenElement ?? document.webkitFullscreenElement ?? null
+}
+
+function canUseNativeFullscreen(element) {
+  return Boolean(element?.requestFullscreen || element?.webkitRequestFullscreen)
+}
+
+function isNativeFullscreenSupported() {
+  if (typeof document === 'undefined') {
+    return false
+  }
+
+  return Boolean(
+    document.fullscreenEnabled ||
+      document.webkitFullscreenEnabled ||
+      document.documentElement?.requestFullscreen ||
+      document.documentElement?.webkitRequestFullscreen,
+  )
+}
+
+async function requestNativeFullscreen(element) {
+  if (element.requestFullscreen) {
+    await element.requestFullscreen()
+    return true
+  }
+
+  if (element.webkitRequestFullscreen) {
+    element.webkitRequestFullscreen()
+    return true
+  }
+
+  return false
+}
+
+async function exitNativeFullscreen() {
+  if (document.exitFullscreen) {
+    await document.exitFullscreen()
+    return true
+  }
+
+  if (document.webkitExitFullscreen) {
+    document.webkitExitFullscreen()
+    return true
+  }
+
+  return false
+}
+
 const baseControlStyle = {
   height: CONTROL_HEIGHT,
   boxSizing: 'border-box',
@@ -23,12 +73,15 @@ const baseControlStyle = {
 export default function App({ levelId = DEFAULT_LEVEL_ID }) {
   const level = LEVELS[levelId] ?? LEVELS[DEFAULT_LEVEL_ID]
   const [is2D, setIs2D] = useState(false)
-  const [isFullscreen, setIsFullscreen] = useState(false)
+  const [isNativeFullscreen, setIsNativeFullscreen] = useState(false)
+  const [isExpandedFallback, setIsExpandedFallback] = useState(false)
   const [hasUserInteracted3D, setHasUserInteracted3D] = useState(false)
   const [opticYaws, setOpticYaws] = useState(() => buildInitialOpticYaws(level))
   const [fiberMeters, setFiberMeters] = useState([])
   const containerRef = useRef(null)
   const saved3DViewRef = useRef(null)
+  const nativeFullscreenSupported = isNativeFullscreenSupported()
+  const isFullscreen = isNativeFullscreen || isExpandedFallback
 
   const handleSave3DView = useCallback((view) => {
     saved3DViewRef.current = view
@@ -36,15 +89,32 @@ export default function App({ levelId = DEFAULT_LEVEL_ID }) {
 
   useEffect(() => {
     const handleFullscreenChange = () => {
-      setIsFullscreen(document.fullscreenElement === containerRef.current)
+      setIsNativeFullscreen(getFullscreenElement() === containerRef.current)
     }
 
     document.addEventListener('fullscreenchange', handleFullscreenChange)
+    document.addEventListener('webkitfullscreenchange', handleFullscreenChange)
+    handleFullscreenChange()
 
     return () => {
       document.removeEventListener('fullscreenchange', handleFullscreenChange)
+      document.removeEventListener('webkitfullscreenchange', handleFullscreenChange)
     }
   }, [])
+
+  useEffect(() => {
+    if (!isExpandedFallback) {
+      return undefined
+    }
+
+    const previousBodyOverflow = document.body.style.overflow
+
+    document.body.style.overflow = 'hidden'
+
+    return () => {
+      document.body.style.overflow = previousBodyOverflow
+    }
+  }, [isExpandedFallback])
 
   const handleToggleFullscreen = useCallback(async () => {
     const element = containerRef.current
@@ -53,13 +123,31 @@ export default function App({ levelId = DEFAULT_LEVEL_ID }) {
       return
     }
 
-    if (document.fullscreenElement === element) {
-      await document.exitFullscreen?.()
+    if (isNativeFullscreen) {
+      await exitNativeFullscreen()
       return
     }
 
-    await element.requestFullscreen?.()
-  }, [])
+    if (isExpandedFallback) {
+      setIsExpandedFallback(false)
+      return
+    }
+
+    if (canUseNativeFullscreen(element)) {
+      try {
+        const enteredNativeFullscreen = await requestNativeFullscreen(element)
+
+        if (enteredNativeFullscreen) {
+          return
+        }
+      } catch {
+        setIsExpandedFallback(true)
+        return
+      }
+    }
+
+    setIsExpandedFallback(true)
+  }, [isExpandedFallback, isNativeFullscreen])
 
   const handleFirst3DInteraction = useCallback(() => {
     setHasUserInteracted3D(true)
@@ -97,9 +185,17 @@ export default function App({ levelId = DEFAULT_LEVEL_ID }) {
       ref={containerRef}
       onContextMenu={(e) => e.preventDefault()}
       style={{
-        width: '100%',
-        height: isFullscreen ? '100vh' : 560,
-        position: 'relative',
+        width: isExpandedFallback ? '100vw' : '100%',
+        height: isFullscreen ? '100dvh' : 560,
+        position: isExpandedFallback ? 'fixed' : 'relative',
+        inset: isExpandedFallback ? 0 : undefined,
+        zIndex: isExpandedFallback ? 2147483647 : undefined,
+        boxSizing: 'border-box',
+        paddingTop: isExpandedFallback ? 'env(safe-area-inset-top)' : 0,
+        paddingRight: isExpandedFallback ? 'env(safe-area-inset-right)' : 0,
+        paddingBottom: isExpandedFallback ? 'env(safe-area-inset-bottom)' : 0,
+        paddingLeft: isExpandedFallback ? 'env(safe-area-inset-left)' : 0,
+        background: isExpandedFallback ? '#fff' : undefined,
         display: 'flex',
         flexDirection: 'column',
         touchAction: 'none',
@@ -212,7 +308,13 @@ export default function App({ levelId = DEFAULT_LEVEL_ID }) {
               WebkitAppearance: 'none',
             }}
           >
-            {isFullscreen ? 'Exit fullscreen' : 'Fullscreen'}
+            {isNativeFullscreen
+              ? 'Exit fullscreen'
+              : isExpandedFallback
+                ? 'Collapse'
+                : nativeFullscreenSupported
+                  ? 'Fullscreen'
+                  : 'Expand'}
           </button>
         </div>
       </div>
