@@ -9,7 +9,7 @@
   echo
   echo Local site: http://localhost:4000
   echo
-  open http://localhost:4000
+  open -g http://localhost:4000
 ) &
 poller_pid=$!
 
