@@ -9,6 +9,13 @@ import {
   clamp01,
 } from './simulationCore'
 
+const ROTATION_SENSITIVITY = 0.45
+const ROTATION_DEAD_ZONE_RADIUS = 0.35
+
+function normalizeAngle(angle) {
+  return Math.atan2(Math.sin(angle), Math.cos(angle))
+}
+
 function Label({ children, position, is2D = false }) {
   return (
     <Html
@@ -216,7 +223,14 @@ export function MountedOptic({
       const dragY = position[1] - POST_HEIGHT / 2
       const plane = new THREE.Plane(new THREE.Vector3(0, 1, 0), -dragY)
       if (!ray.intersectPlane(plane, hit)) return null
-      return Math.atan2(hit.z - position[2], hit.x - position[0])
+
+      const dx = hit.x - position[0]
+      const dz = hit.z - position[2]
+      const radius = Math.hypot(dx, dz)
+
+      if (radius < ROTATION_DEAD_ZONE_RADIUS) return null
+
+      return Math.atan2(dz, dx)
     },
     [position],
   )
@@ -247,7 +261,8 @@ export function MountedOptic({
       if (pointerAngle === null) return
       e.sourceEvent?.preventDefault?.()
       e.stopPropagation()
-      const delta = pointerAngle - dragRef.current.startPointerAngle
+      const delta =
+        normalizeAngle(pointerAngle - dragRef.current.startPointerAngle) * ROTATION_SENSITIVITY
       onYawChange?.(dragRef.current.startYaw - delta)
     },
     [getAngleFromRay, onYawChange, rotatable],
