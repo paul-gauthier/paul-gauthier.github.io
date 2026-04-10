@@ -1,10 +1,52 @@
 ---
 layout: post
-title: Hello SPDC
+title: Spontaneous Parametric Down-Conversion
 ---
 
-This is a hello-world SPDC post with the embedded demo below.
+Spontaneous parametric down-conversion (SPDC)
+is a workhorse in quantum optics labs as a
+straightforward way to generate entangled pairs of photons.
+A *pump* laser beam (shown in blue) is sent through a non-linear crystal
+to create entangled pairs (red).
+Most of the pump beam just passes straight through the crystal,
+but occasionally one pump photon is converted
+to a pair of *down-converted* photons.
+The original photon's energy is split between two photons of lower energy 
+that are born at the same time,
+so SPDC can be used to create pairs that are *time-energy* entangled.
 
 {% include spdc_embed.html level="level2" %}
 
-More text can go here under the interactive app.
+Pairs of photons leave the crystal at equal-but-opposite angles
+with respect to the pump beam,
+because they are evenly splitting the momentum of their pump photon.
+So every pair spreads apart at a very similar *opening angle*,
+but oriented randomly around the pump beam.
+The result is that all the pairs form a cone shape.
+Rotating the crystal so it sits at different angles
+with respect to the pump beam either widens or narrows the cone.
+
+To make use of the entangled pairs, you need to collect
+photons from opposite sides of the cone.
+That way you'll pick up both members of many pairs,
+which are often called the *signal* and *idler* photons.
+It's common to collect signals and idlers each into
+their own piece of fiber optic cable,
+so they can be routed to additional experimental
+apparatus, detected and counted, etc.
+
+The interactive demo above shows all of these key
+components and steps.
+You can try your hand at collecting entangled
+pairs into fiber by hitting the **jitter** button
+to shake up the alignment.
+Try rotating components to realign the setup,
+and see if you can get the power meters back up to ~100%.
+
+I’ve been working with an SPDC setup recently, 
+and aligning the pump, crystal and collection optics can be quite exacting.
+Also, in real life the pump beam will blind you if you look at it
+and the SPDC cone is completely invisible.
+This makes things considerably trickier than the online demo.
+I'll follow up with another article with tips, tricks and an
+actual procedure for SPDC alignment in the lab.
