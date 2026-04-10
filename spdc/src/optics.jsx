@@ -174,7 +174,7 @@ function FiberPigtail() {
       </mesh>
       <mesh castShadow>
         <tubeGeometry args={[curve, 48, 0.024, 10, false]} />
-        <meshStandardMaterial color="#facc15" metalness={0.05} roughness={0.82} />
+        <meshStandardMaterial color="#22c55e" metalness={0.05} roughness={0.82} />
       </mesh>
     </>
   )
