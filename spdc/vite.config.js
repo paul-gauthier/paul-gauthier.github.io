@@ -7,4 +7,13 @@ export default defineConfig({
   server: {
     allowedHosts: true,
   },
+  build: {
+    lib: {
+      entry: 'src/embed.jsx',
+      formats: ['es'],
+      fileName: () => 'spdc.js',
+    },
+    outDir: '../docs/assets/spdc',
+    emptyOutDir: true,
+  },
 })

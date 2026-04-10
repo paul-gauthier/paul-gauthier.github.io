@@ -20,8 +20,8 @@ const baseControlStyle = {
   alignItems: 'center',
 }
 
-export default function App() {
-  const level = LEVELS[DEFAULT_LEVEL_ID]
+export default function App({ levelId = DEFAULT_LEVEL_ID }) {
+  const level = LEVELS[levelId] ?? LEVELS[DEFAULT_LEVEL_ID]
   const [is2D, setIs2D] = useState(false)
   const [hasUserInteracted3D, setHasUserInteracted3D] = useState(false)
   const [opticYaws, setOpticYaws] = useState(() => buildInitialOpticYaws(level))

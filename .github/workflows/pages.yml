@@ -24,6 +24,19 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v4
 
+      - name: Set up Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: "20"
+
+      - name: Install spdc dependencies
+        run: npm install
+        working-directory: spdc
+
+      - name: Build spdc assets
+        run: npm run build
+        working-directory: spdc
+
       - name: Set up Ruby
         uses: ruby/setup-ruby@v1
         with:
