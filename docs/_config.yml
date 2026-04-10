@@ -1,5 +1,5 @@
 title: Notes by Paul Gauthier
-#description: Personal blog and imported writing
+description: Personal blog and imported writing
 permalink: /:year/:month/:day/:title/
 markdown: kramdown
 url: "https://paulg.info"
