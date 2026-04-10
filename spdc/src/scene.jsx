@@ -271,7 +271,7 @@ function Fit3DCamera({ board, enabled, controlsRef, savedView, sceneBounds }) {
     const horizontalFov = 2 * Math.atan(Math.tan(verticalFov / 2) * (size.width / size.height))
     const fitHeightDistance = projectedHalfHeight / Math.tan(verticalFov / 2)
     const fitWidthDistance = projectedHalfWidth / Math.tan(horizontalFov / 2)
-    const distance = (Math.max(fitHeightDistance, fitWidthDistance) + projectedHalfDepth) * 0.8
+    const distance = (Math.max(fitHeightDistance, fitWidthDistance) + projectedHalfDepth) * 0.9
     const position = target.clone().add(viewDirection.multiplyScalar(distance))
 
     camera.position.copy(position)
