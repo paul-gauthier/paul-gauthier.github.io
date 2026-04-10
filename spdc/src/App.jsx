@@ -1,4 +1,4 @@
-import React, { useCallback, useRef, useState } from 'react'
+import React, { useCallback, useEffect, useRef, useState } from 'react'
 import { Canvas } from '@react-three/fiber'
 import { LEVELS, buildInitialOpticYaws } from './levels'
 import { OpticalScene } from './scene'
@@ -23,13 +23,42 @@ const baseControlStyle = {
 export default function App({ levelId = DEFAULT_LEVEL_ID }) {
   const level = LEVELS[levelId] ?? LEVELS[DEFAULT_LEVEL_ID]
   const [is2D, setIs2D] = useState(false)
+  const [isFullscreen, setIsFullscreen] = useState(false)
   const [hasUserInteracted3D, setHasUserInteracted3D] = useState(false)
   const [opticYaws, setOpticYaws] = useState(() => buildInitialOpticYaws(level))
   const [fiberMeters, setFiberMeters] = useState([])
+  const containerRef = useRef(null)
   const saved3DViewRef = useRef(null)
 
   const handleSave3DView = useCallback((view) => {
     saved3DViewRef.current = view
+  }, [])
+
+  useEffect(() => {
+    const handleFullscreenChange = () => {
+      setIsFullscreen(document.fullscreenElement === containerRef.current)
+    }
+
+    document.addEventListener('fullscreenchange', handleFullscreenChange)
+
+    return () => {
+      document.removeEventListener('fullscreenchange', handleFullscreenChange)
+    }
+  }, [])
+
+  const handleToggleFullscreen = useCallback(async () => {
+    const element = containerRef.current
+
+    if (!element) {
+      return
+    }
+
+    if (document.fullscreenElement === element) {
+      await document.exitFullscreen?.()
+      return
+    }
+
+    await element.requestFullscreen?.()
   }, [])
 
   const handleFirst3DInteraction = useCallback(() => {
@@ -65,10 +94,11 @@ export default function App({ levelId = DEFAULT_LEVEL_ID }) {
 
   return (
     <div
+      ref={containerRef}
       onContextMenu={(e) => e.preventDefault()}
       style={{
         width: '100%',
-        height: 560,
+        height: isFullscreen ? '100vh' : 560,
         position: 'relative',
         display: 'flex',
         flexDirection: 'column',
@@ -171,6 +201,18 @@ export default function App({ levelId = DEFAULT_LEVEL_ID }) {
             }}
           >
             {is2D ? '▭ 2D' : '⬡ 3D'}
+          </button>
+          <button
+            onClick={handleToggleFullscreen}
+            style={{
+              ...baseControlStyle,
+              cursor: 'pointer',
+              justifyContent: 'center',
+              appearance: 'none',
+              WebkitAppearance: 'none',
+            }}
+          >
+            {isFullscreen ? 'Exit fullscreen' : 'Fullscreen'}
           </button>
         </div>
       </div>
