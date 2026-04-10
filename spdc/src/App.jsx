@@ -7,7 +7,7 @@ const DEFAULT_LEVEL_ID = 'level2'
 const CONTROL_HEIGHT = 32
 const TWO_D_TOP_UI_INSET = 32
 const POWER_METER_BAR_HEIGHT = 56
-const EMBED_ASPECT_RATIO = 1.75
+const EMBED_ASPECT_RATIO = 1.3
 
 function getFullscreenElement() {
   return document.fullscreenElement ?? document.webkitFullscreenElement ?? null
