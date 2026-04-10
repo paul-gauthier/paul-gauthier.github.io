@@ -7,6 +7,7 @@ const DEFAULT_LEVEL_ID = 'level2'
 const CONTROL_HEIGHT = 32
 const TWO_D_TOP_UI_INSET = 32
 const POWER_METER_BAR_HEIGHT = 56
+const EMBED_ASPECT_RATIO = 1.5
 
 function getFullscreenElement() {
   return document.fullscreenElement ?? document.webkitFullscreenElement ?? null
@@ -186,7 +187,8 @@ export default function App({ levelId = DEFAULT_LEVEL_ID }) {
       onContextMenu={(e) => e.preventDefault()}
       style={{
         width: isExpandedFallback ? '100vw' : '100%',
-        height: isFullscreen ? '100dvh' : 560,
+        height: isFullscreen ? '100dvh' : undefined,
+        aspectRatio: isFullscreen ? undefined : EMBED_ASPECT_RATIO,
         position: isExpandedFallback ? 'fixed' : 'relative',
         inset: isExpandedFallback ? 0 : undefined,
         zIndex: isExpandedFallback ? 2147483647 : undefined,
