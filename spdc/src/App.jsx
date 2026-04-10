@@ -9,6 +9,10 @@ const TOP_CONTROL_BAR_HEIGHT = CONTROL_HEIGHT + 24
 const POWER_METER_BAR_HEIGHT = 56
 const EMBED_ASPECT_RATIO = 1.3
 
+function clamp01(value) {
+  return Math.min(1, Math.max(0, value))
+}
+
 function getFullscreenElement() {
   return document.fullscreenElement ?? document.webkitFullscreenElement ?? null
 }
@@ -79,6 +83,7 @@ export default function App({ levelId = DEFAULT_LEVEL_ID }) {
   const [hasUserInteracted3D, setHasUserInteracted3D] = useState(false)
   const [opticYaws, setOpticYaws] = useState(() => buildInitialOpticYaws(level))
   const [fiberMeters, setFiberMeters] = useState([])
+  const [displayCouplingById, setDisplayCouplingById] = useState({})
   const containerRef = useRef(null)
   const saved3DViewRef = useRef(null)
   const nativeFullscreenSupported = isNativeFullscreenSupported()
@@ -116,6 +121,48 @@ export default function App({ levelId = DEFAULT_LEVEL_ID }) {
       document.body.style.overflow = previousBodyOverflow
     }
   }, [isExpandedFallback])
+
+  useEffect(() => {
+    setDisplayCouplingById((current) =>
+      Object.fromEntries(
+        fiberMeters.map((meter) => [
+          meter.id,
+          meter.coupling > 0 ? (current[meter.id] ?? meter.coupling) : 0,
+        ]),
+      ),
+    )
+  }, [fiberMeters])
+
+  useEffect(() => {
+    if (fiberMeters.length === 0) {
+      setDisplayCouplingById({})
+      return undefined
+    }
+
+    const intervalId = window.setInterval(() => {
+      setDisplayCouplingById((current) =>
+        Object.fromEntries(
+          fiberMeters.map((meter) => {
+            const coupling = meter.coupling ?? 0
+
+            if (!(coupling > 0)) {
+              return [meter.id, 0]
+            }
+
+            const amplitude = Math.min(0.015, Math.max(0.003, coupling * 0.05))
+            const target = clamp01(coupling + (Math.random() * 2 - 1) * amplitude)
+            const previous = current[meter.id] ?? coupling
+
+            return [meter.id, previous + (target - previous) * 0.35]
+          }),
+        ),
+      )
+    }, 120)
+
+    return () => {
+      window.clearInterval(intervalId)
+    }
+  }, [fiberMeters])
 
   const handleToggleFullscreen = useCallback(async () => {
     const element = containerRef.current
@@ -344,6 +391,7 @@ export default function App({ levelId = DEFAULT_LEVEL_ID }) {
         }}
       >
         {fiberMeters.map((meter) => {
+          const displayCoupling = displayCouplingById[meter.id] ?? meter.coupling
           const couplingPercent = Math.round(meter.coupling * 100)
 
           return (
@@ -372,9 +420,10 @@ export default function App({ levelId = DEFAULT_LEVEL_ID }) {
               >
                 <div
                   style={{
-                    width: `${meter.coupling * 100}%`,
+                    width: `${displayCoupling * 100}%`,
                     height: '100%',
                     background: meter.color,
+                    transition: 'width 120ms linear',
                   }}
                 />
               </div>
