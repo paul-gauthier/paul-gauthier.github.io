@@ -71,6 +71,9 @@ const baseControlStyle = {
   borderRadius: 6,
   fontSize: 13,
   lineHeight: 1,
+  color: '#111827',
+  colorScheme: 'light',
+  WebkitTextFillColor: '#111827',
   display: 'flex',
   alignItems: 'center',
 }
