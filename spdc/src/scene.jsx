@@ -256,7 +256,7 @@ function Fit3DCamera({ board, enabled, controlsRef, savedView, sceneBounds, rese
       halfExtents = new THREE.Vector3(width / 2, POST_HEIGHT / 2, depth / 2)
     }
 
-    const viewDirection = new THREE.Vector3(0, 0.72, 0.9).normalize()
+    const viewDirection = new THREE.Vector3(0, 0.45, 0.9).normalize()
     const forward = viewDirection.clone().multiplyScalar(-1)
     const worldUp = new THREE.Vector3(0, 1, 0)
     const right = forward.clone().cross(worldUp).normalize()
