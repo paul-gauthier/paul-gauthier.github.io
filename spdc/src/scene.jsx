@@ -256,6 +256,7 @@ function Fit3DCamera({ board, enabled, controlsRef, savedView, sceneBounds, rese
       halfExtents = new THREE.Vector3(width / 2, POST_HEIGHT / 2, depth / 2)
     }
 
+    const framedTarget = target.clone().add(new THREE.Vector3(0, -halfExtents.y * 0.2, 0))
     const viewDirection = new THREE.Vector3(0, 0.45, 0.9).normalize()
     const forward = viewDirection.clone().multiplyScalar(-1)
     const worldUp = new THREE.Vector3(0, 1, 0)
@@ -280,7 +281,7 @@ function Fit3DCamera({ board, enabled, controlsRef, savedView, sceneBounds, rese
     const fitHeightDistance = projectedHalfHeight / Math.tan(verticalFov / 2)
     const fitWidthDistance = projectedHalfWidth / Math.tan(horizontalFov / 2)
     const distance = (Math.max(fitHeightDistance, fitWidthDistance) + projectedHalfDepth) * 0.9
-    const position = target.clone().add(viewDirection.multiplyScalar(distance))
+    const position = framedTarget.clone().add(viewDirection.multiplyScalar(distance))
 
     camera.position.copy(position)
     camera.near = 0.1
@@ -289,12 +290,12 @@ function Fit3DCamera({ board, enabled, controlsRef, savedView, sceneBounds, rese
     hasInitializedViewRef.current = true
 
     if (controlsRef.current) {
-      controlsRef.current.target.copy(target)
+      controlsRef.current.target.copy(framedTarget)
       controlsRef.current.update()
       return
     }
 
-    camera.lookAt(target)
+    camera.lookAt(framedTarget)
   }, [board, camera, controlsRef, enabled, resetKey, savedView, sceneBounds, size.height, size.width])
 
   return null
