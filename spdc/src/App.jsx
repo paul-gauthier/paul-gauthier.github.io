@@ -7,7 +7,7 @@ const DEFAULT_LEVEL_ID = 'level2'
 const CONTROL_HEIGHT = 32
 const TOP_CONTROL_BAR_HEIGHT = CONTROL_HEIGHT + 24
 const POWER_METER_BAR_HEIGHT = 56
-const EMBED_ASPECT_RATIO = 1.3
+const EMBED_ASPECT_RATIO = 2
 
 function clamp01(value) {
   return Math.min(1, Math.max(0, value))
