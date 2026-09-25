@@ -58,7 +58,7 @@ Data and code:
 Joint work with Sahil Patel, Sean Doan and Galan Moody in the Quantum Photonics Lab at UCSB.
 Supported by the NSF Quantum Foundry and the UCSB NRT program.
 
-## Experimental schematic and causal geometry
+### Experimental schematic and causal geometry
 
 ![Figure 1: Experimental schematic and causal geometry](/assets/quantum-eraser-space/fig-1.png)
 
@@ -79,7 +79,7 @@ predicts that
 T<sub>∞</sub> ≈ 73–82%
 of launched idlers will propagate unmeasured forever.
 
-## Normalized launch-specific interference quadratures
+### Normalized launch-specific interference quadratures
 
 ![Figure 4: Normalized launch-specific interference quadratures](/assets/quantum-eraser-space/fig-4.png)
 
@@ -89,7 +89,7 @@ rate of path markers predicted to survive indefinitely.
 All exclude the full-restoration unit circle
 (η<sub>∞</sub> = 1).
 
-## Where the photons are now
+### Where the photons are now
 
 Most of the photons carrying the only which-path information are now 0.5 light-years away, crossing the Oort Cloud.
 
