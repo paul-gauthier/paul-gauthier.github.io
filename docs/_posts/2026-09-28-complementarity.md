@@ -91,7 +91,13 @@ All exclude the full-restoration unit circle
 
 ### Where the photons are now
 
-![Modeled photon propagation six months after launch](/assets/quantum-eraser-space/6-months.jpg)
+<figure class="post-figure-small">
+  <a href="/assets/quantum-eraser-space/6-months.jpg">
+    <img src="/assets/quantum-eraser-space/6-months.jpg"
+      alt="Modeled photon propagation six months after launch"
+      width="1206" height="1221">
+  </a>
+</figure>
 
 Most of the photons carrying the only which-path information are now 0.5 light-years away, crossing the Oort Cloud.
 
