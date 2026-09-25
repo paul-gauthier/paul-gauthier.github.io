@@ -60,7 +60,13 @@ Supported by the NSF Quantum Foundry and the UCSB NRT program.
 
 ### Experimental schematic and causal geometry
 
-![Figure 1: Experimental schematic and causal geometry](/assets/complementarity/fig-1.png)
+<figure class="post-figure">
+  <a href="/assets/complementarity/fig-1.png">
+    <img src="/assets/complementarity/fig-1.png"
+      alt="Figure 1: Experimental schematic and causal geometry"
+      width="1022" height="634">
+  </a>
+</figure>
 
 Experimental schematic and causal geometry.
 Each polarization-entangled idler photon carries the only path marker for its
@@ -81,7 +87,13 @@ of launched idlers will propagate unmeasured forever.
 
 ### Normalized launch-specific interference quadratures
 
-![Figure 4: Normalized launch-specific interference quadratures](/assets/complementarity/fig-4.png)
+<figure class="post-figure">
+  <a href="/assets/complementarity/fig-4.png">
+    <img src="/assets/complementarity/fig-4.png"
+      alt="Figure 4: Normalized launch-specific interference quadratures"
+      width="1020" height="496">
+  </a>
+</figure>
 
 Cosine and sine quadratures of the launch-specific signal-singles interference
 fringe for datasets D1-D6, each normalized by its dataset-specific
