@@ -7,7 +7,7 @@ excerpt: >-
   never measured? We launched the photons carrying it into space from the lab
   roof at UCSB and estimate 73-82% will propagate unmeasured forever.
   Launching had no effect, consistent with quantum theory.
-social_image: /assets/quantum-eraser-space/roof.jpg
+social_image: /assets/complementarity/roof.jpg
 image_alt: Rooftop photon launch enclosure at UCSB
 ---
 
@@ -17,8 +17,8 @@ and estimate 73-82% will propagate unmeasured forever.
 Launching had no effect, consistent with quantum theory.
 
 <figure class="post-photo">
-  <a href="/assets/quantum-eraser-space/roof.jpg">
-    <img src="/assets/quantum-eraser-space/roof.jpg"
+  <a href="/assets/complementarity/roof.jpg">
+    <img src="/assets/complementarity/roof.jpg"
       alt="Rooftop photon launch enclosure at UCSB"
       width="4284" height="5712">
   </a>
@@ -60,7 +60,7 @@ Supported by the NSF Quantum Foundry and the UCSB NRT program.
 
 ### Experimental schematic and causal geometry
 
-![Figure 1: Experimental schematic and causal geometry](/assets/quantum-eraser-space/fig-1.png)
+![Figure 1: Experimental schematic and causal geometry](/assets/complementarity/fig-1.png)
 
 Experimental schematic and causal geometry.
 Each polarization-entangled idler photon carries the only path marker for its
@@ -81,7 +81,7 @@ of launched idlers will propagate unmeasured forever.
 
 ### Normalized launch-specific interference quadratures
 
-![Figure 4: Normalized launch-specific interference quadratures](/assets/quantum-eraser-space/fig-4.png)
+![Figure 4: Normalized launch-specific interference quadratures](/assets/complementarity/fig-4.png)
 
 Cosine and sine quadratures of the launch-specific signal-singles interference
 fringe for datasets D1-D6, each normalized by its dataset-specific
@@ -95,8 +95,8 @@ All exclude the full-restoration unit circle
   <video controls muted playsinline preload="metadata" width="1920" height="1080"
     data-autoplay-in-view
     aria-label="Modeled propagation of the launched photons from UCSB into space">
-    <source src="/assets/quantum-eraser-space/idler-photons.mp4" type="video/mp4">
-    <a href="/assets/quantum-eraser-space/idler-photons.mp4">Download the photon propagation video</a>.
+    <source src="/assets/complementarity/idler-photons.mp4" type="video/mp4">
+    <a href="/assets/complementarity/idler-photons.mp4">Download the photon propagation video</a>.
   </video>
 </figure>
 
