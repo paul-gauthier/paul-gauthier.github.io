@@ -1,0 +1,88 @@
+---
+title: A quantum eraser with photons launched into space
+date: 2026-09-28
+unlisted: true
+excerpt: >-
+  What happens in a quantum eraser experiment if the which-path information is
+  never measured? We launched the photons carrying it into space from the lab
+  roof at UCSB and estimate 73-82% will propagate unmeasured forever.
+social_image: /assets/quantum-eraser-space/roof.jpg
+image_alt: Rooftop photon-launch enclosure at UCSB
+---
+
+![Rooftop photon-launch enclosure at UCSB](/assets/quantum-eraser-space/roof.jpg)
+
+What happens in a quantum eraser experiment if the which-path information is never measured?
+We launched the photons carrying it into space from the lab roof at UCSB
+and estimate 73-82% will propagate unmeasured forever.
+Launching had no effect, consistent with quantum theory.
+
+To our knowledge, no one had tested this unmeasured case.
+In previous experiments, the which-path information that suppresses interference
+was always recorded by a detector, an absorber, or the surrounding environment.
+
+In our setup, the photons carrying that information traveled by fiber to the roof and were launched straight up through the small window in the top of the enclosure in the photo.
+From there, their path runs through the atmosphere, the Milky Way, and into the intergalactic medium.
+Our flat ΛCDM transmission model estimates that 73-82% will survive unmeasured indefinitely.
+Their entangled twins stayed in the lab and went through an interferometer.
+
+Launching the photons did not restore interference.
+We alternated between launching the photons and measuring them instead.
+Across 6.6 hours of integration and 100 million photon detections, we observed no statistically significant difference in the twins' unconditioned interference.
+
+Standard quantum theory predicts this null result immediately, via the partial trace.
+But prior tests may have left the collapse-locality loophole open.
+If so, measuring the which-path information could have causally
+influenced what the interferometer recorded.
+For the surviving photons, it cannot.
+
+As with loophole-closing Bell tests, the result is not surprising.
+Our goal was to remove a physical assumption from a foundational test.
+
+The relation to the loophole, the causal geometry, our transmission model, and quantitative bounds are in the preprint:
+
+[Read the preprint on arXiv](https://arxiv.org/abs/2609.25382)
+
+Data and code:
+
+[paul-gauthier/complementarity on GitHub](https://github.com/paul-gauthier/complementarity)
+
+Joint work with Sahil Patel, Sean Doan and Galan Moody in the Quantum Photonics Lab at UCSB.
+Supported by the NSF Quantum Foundry and the UCSB NRT program.
+
+## Experimental schematic and causal geometry
+
+![Figure 1: Experimental schematic and causal geometry](/assets/quantum-eraser-space/fig-1.png)
+
+Experimental schematic and causal geometry.
+Each polarization-entangled idler photon carries the only path marker for its
+signal in the interferometer.
+At the roof, a common path supports launching the idlers,
+projecting them to erase the marker, or detecting them with the marker
+preserved; three paths are drawn for clarity.
+Pair creation encodes path information at 0 ns.
+The idler is launched on an outgoing null
+trajectory at ~300 ns and exits the past light cone
+of the signal-detection event at ~425 ns.
+The signal is detected at ~600 ns.
+Our transmission model
+of the launch optics, atmosphere, Milky Way, and intergalactic medium
+predicts that
+T<sub>∞</sub> ≈ 73–82%
+of launched idlers will propagate unmeasured forever.
+
+## Normalized launch-specific interference quadratures
+
+![Figure 4: Normalized launch-specific interference quadratures](/assets/quantum-eraser-space/fig-4.png)
+
+Cosine and sine quadratures of the launch-specific signal-singles interference
+fringe for datasets D1-D6, each normalized by its dataset-specific
+rate of path markers predicted to survive indefinitely.
+All exclude the full-restoration unit circle
+(η<sub>∞</sub> = 1).
+
+## Where the photons are now
+
+Most of the photons carrying the only which-path information are now 0.5 light-years away, crossing the Oort Cloud.
+
+[Explore the photons' journey](https://paulg.info/complementarity-photons/)
