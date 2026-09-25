@@ -45,7 +45,16 @@ The original article link is resolved like this:
 
 ## Local development
 
-Typical workflow:
+With Docker running, start the local preview from the repository root:
+
+```bash
+./scripts/jekyll_run.sh
+```
+
+The script opens [http://localhost:4000](http://localhost:4000) in your browser
+and automatically rebuilds the site when files change. Stop it with `Ctrl+C`.
+
+To refresh imported aider posts before previewing:
 
 ```bash
 python scripts/sync_aider_blog.py
