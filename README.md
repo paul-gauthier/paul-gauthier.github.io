@@ -2,6 +2,32 @@
 
 This is a Jekyll-based personal blog with support for importing articles from the aider blog.
 
+## Shareable, unlisted articles
+
+To share an article before listing it on the homepage, create a normal post in
+`docs/_posts/` and add `unlisted: true` to its YAML front matter:
+
+```yaml
+---
+title: My draft article
+date: 2026-09-25
+unlisted: true
+---
+```
+
+The article is built at its normal URL, omitted from the homepage, and given a
+`<meta name="robots" content="noindex">` tag asking search engines not to index it.
+Anyone with the link can read and forward it; unlisted articles are not private.
+Keep these posts out of `_drafts/` and do not set `published: false`, since those
+options prevent them from being included in a normal build.
+
+Remove `unlisted: true` or set it to `false` to list the article on the homepage
+and allow indexing, without changing its URL. Avoid changing the filename or date
+if you want to preserve that URL.
+
+The test article is `docs/_posts/2026-09-25-unlisted-test.md`, with the URL
+`https://paulg.info/2026/09/25/unlisted-test/` after deployment.
+
 ## Imported aider posts
 
 Imported aider posts live in `_posts/aider/`.

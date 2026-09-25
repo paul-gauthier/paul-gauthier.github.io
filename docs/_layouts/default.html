@@ -5,6 +5,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>{% if page.title %}{{ page.title }} | {% endif %}{{ site.title }}</title>
     <meta name="description" content="{{ page.excerpt | default: site.description | strip_html | normalize_whitespace }}">
+    {% if page.unlisted == true %}
+      <meta name="robots" content="noindex">
+    {% endif %}
     {% include social_meta.html %}
     <style>
       :root {
