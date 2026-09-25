@@ -95,6 +95,7 @@ trap cleanup EXIT
 jekyll_args=(
   --source docs
   --config docs/_config.yml
+  --future
   --host 0.0.0.0
   --force_polling
 )
@@ -117,5 +118,4 @@ docker run \
 # Additional options:
 # --incremental: Only rebuilds files that changed
 # --livereload: Auto-refreshes browser when content changes
-
 

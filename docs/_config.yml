@@ -4,6 +4,8 @@ permalink: /:year/:month/:day/:title/
 markdown: kramdown
 url: "https://paulg.info"
 baseurl: ""
+# Build future-dated posts for sharing; use unlisted: true to hide them.
+future: true
 
 plugins:
   - jekyll-scholar
