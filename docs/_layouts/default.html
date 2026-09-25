@@ -89,14 +89,14 @@
         margin: 0 0 1rem 1.5rem;
       }
 
-      .post-figure-small {
-        width: 360px;
+      .post-video {
+        width: 640px;
         max-width: 100%;
         margin: 1.5rem auto;
       }
 
       .post-photo img,
-      .post-figure-small img {
+      .post-video video {
         display: block;
         width: 100%;
       }
@@ -116,10 +116,6 @@
           float: none;
           width: 280px;
           margin: 1.5rem auto;
-        }
-
-        .post-figure-small {
-          width: 280px;
         }
       }
 
@@ -163,5 +159,6 @@
 
       {{ content }}
     </main>
+    <script src="{{ '/assets/js/video-autoplay.js' | relative_url }}" defer></script>
   </body>
 </html>
