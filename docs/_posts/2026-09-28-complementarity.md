@@ -49,11 +49,11 @@ Our goal was to remove a physical assumption from a foundational test.
 
 The relation to the loophole, the causal geometry, our transmission model, and quantitative bounds are in the preprint:
 
-[Read the preprint on arXiv](https://arxiv.org/abs/2609.25382)
+[https://arxiv.org/abs/2609.25382](https://arxiv.org/abs/2609.25382)
 
 Data and code:
 
-[paul-gauthier/complementarity on GitHub](https://github.com/paul-gauthier/complementarity)
+[https://github.com/paul-gauthier/complementarity](https://github.com/paul-gauthier/complementarity)
 
 Joint work with Sahil Patel, Sean Doan and Galan Moody in the Quantum Photonics Lab at UCSB.
 Supported by the NSF Quantum Foundry and the UCSB NRT program.
