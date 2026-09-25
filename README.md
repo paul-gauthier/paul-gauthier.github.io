@@ -49,7 +49,6 @@ Typical workflow:
 
 ```bash
 python scripts/sync_aider_blog.py
-bundle exec jekyll serve
 ```
 
 By default, the sync script reads posts from:
