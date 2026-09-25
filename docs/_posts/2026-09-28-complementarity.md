@@ -68,7 +68,6 @@ Supported by the NSF Quantum Foundry and the UCSB NRT program.
   </a>
 </figure>
 
-Experimental schematic and causal geometry.
 Each polarization-entangled idler photon carries the only path marker for its
 signal in the interferometer.
 At the roof, a common path supports launching the idlers,
