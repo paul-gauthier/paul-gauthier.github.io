@@ -55,7 +55,7 @@ Data and code:
 
 [https://github.com/paul-gauthier/complementarity](https://github.com/paul-gauthier/complementarity)
 
-Joint work with Sahil Patel, Sean Doan and Galan Moody in the Quantum Photonics Lab at UCSB.
+Joint work with Sahil Patel, Sean Doan and Galan Moody in the [Quantum Photonics Lab at UCSB](https://qpl.ece.ucsb.edu).
 Supported by the NSF Quantum Foundry and the UCSB NRT program.
 
 ### Experimental schematic and causal geometry
