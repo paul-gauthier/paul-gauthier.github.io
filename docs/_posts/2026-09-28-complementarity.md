@@ -1,11 +1,12 @@
 ---
-title: A quantum eraser with photons launched into space
+title: Complementarity Test with Unmeasured, Permanently Inaccessible Path Markers
 date: 2026-09-28
 unlisted: true
 excerpt: >-
   What happens in a quantum eraser experiment if the which-path information is
   never measured? We launched the photons carrying it into space from the lab
   roof at UCSB and estimate 73-82% will propagate unmeasured forever.
+  Launching had no effect, consistent with quantum theory.
 social_image: /assets/quantum-eraser-space/roof.jpg
 image_alt: Rooftop photon-launch enclosure at UCSB
 ---
