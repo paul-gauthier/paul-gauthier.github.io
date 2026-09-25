@@ -8,15 +8,22 @@ excerpt: >-
   roof at UCSB and estimate 73-82% will propagate unmeasured forever.
   Launching had no effect, consistent with quantum theory.
 social_image: /assets/quantum-eraser-space/roof.jpg
-image_alt: Rooftop photon-launch enclosure at UCSB
+image_alt: Rooftop photon launch enclosure at UCSB
 ---
-
-![Rooftop photon-launch enclosure at UCSB](/assets/quantum-eraser-space/roof.jpg)
 
 What happens in a quantum eraser experiment if the which-path information is never measured?
 We launched the photons carrying it into space from the lab roof at UCSB
 and estimate 73-82% will propagate unmeasured forever.
 Launching had no effect, consistent with quantum theory.
+
+<figure class="post-photo">
+  <a href="/assets/quantum-eraser-space/roof.jpg">
+    <img src="/assets/quantum-eraser-space/roof.jpg"
+      alt="Rooftop photon launch enclosure at UCSB"
+      width="4284" height="5712">
+  </a>
+  <figcaption>Rooftop photon launch enclosure at UCSB.</figcaption>
+</figure>
 
 To our knowledge, no one had tested this unmeasured case.
 In previous experiments, the which-path information that suppresses interference
