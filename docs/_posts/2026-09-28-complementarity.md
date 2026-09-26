@@ -7,7 +7,7 @@ excerpt: >-
   never measured? We launched the photons carrying it into space from the lab
   roof at UCSB and estimate 73-82% will propagate unmeasured forever.
   Launching had no effect, consistent with quantum theory.
-social_image: /assets/complementarity/fig-1.png
+social_image: /assets/complementarity/fig-1-social.png
 image_alt: Experimental schematic and causal geometry
 ---
 
