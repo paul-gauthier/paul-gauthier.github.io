@@ -40,7 +40,7 @@ Across 6.6 hours of integration and 100 million photon detections, we observed n
 
 Quantum theory predicts this null result immediately, via the partial trace.
 But prior experiments may have left the collapse-locality loophole open,
-allowing the which-path measurements to causally influence the interference record.
+allowing their which-path measurements to causally influence the interference record.
 For the unmeasured surviving photons, this is not possible.
 
 As with loophole-closing Bell tests, the result is not surprising.
