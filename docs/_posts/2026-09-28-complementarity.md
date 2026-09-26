@@ -39,15 +39,13 @@ We alternated between launching the photons and measuring them instead.
 Across 6.6 hours of integration and 100 million photon detections, we observed no statistically significant difference in the twins' unconditioned interference.
 
 Quantum theory predicts this null result immediately, via the partial trace.
-Interference depends only on whether the which-path information exists, not on
-whether anyone ever measures it.
-Because prior experiments always measured that information,
-they may have left the collapse-locality loophole open,
-and the measurement could in principle have causally influenced the interference record.
-For the surviving photons, it cannot.
+But prior experiments may have left the collapse-locality loophole open,
+allowing the which-path measurements to causally influence the interference record.
+For the unmeasured surviving photons, this is not possible.
 
 As with loophole-closing Bell tests, the result is not surprising.
-Our goal was to remove a physical assumption from a foundational test.
+Our goal was to remove a physical assumption from a foundational test
+of the partial trace itself.
 
 The relation to the loophole, the causal geometry, our transmission model, and quantitative bounds are in the preprint:
 
