@@ -112,6 +112,6 @@ All exclude the full-restoration unit circle
   </video>
 </figure>
 
-Most of the photons carrying the only which-path information are now 0.5 light-years away, crossing the Oort Cloud.
+Most of the photons carrying the only which-path information are now 0.57 light-years away, crossing the Oort Cloud.
 
 [View the interactive propagation model](https://paulg.info/complementarity-photons/)
