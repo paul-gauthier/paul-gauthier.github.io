@@ -21,10 +21,8 @@
     {% assign normalized_social_image = social_image %}
   {% elsif page.imported_from == "aider" and social_image_prefix == '/assets/' %}
     {% assign normalized_social_image = social_image | prepend: page.original_site %}
-  {% elsif social_image_prefix == '/' %}
-    {% assign normalized_social_image = social_image | absolute_url %}
   {% else %}
-    {% assign normalized_social_image = '/' | append: social_image | absolute_url %}
+    {% assign normalized_social_image = social_image | absolute_url %}
   {% endif %}
 {% endif %}
 

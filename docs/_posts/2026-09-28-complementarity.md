@@ -7,8 +7,8 @@ excerpt: >-
   never measured? We launched the photons carrying it into space from the lab
   roof at UCSB and estimate 73-82% will propagate unmeasured forever.
   Launching had no effect, consistent with quantum theory.
-social_image: /assets/complementarity/roof.jpg
-image_alt: Rooftop photon launch enclosure at UCSB
+social_image: /assets/complementarity/fig-1.png
+image_alt: Experimental schematic and causal geometry
 ---
 
 What happens in a quantum eraser experiment if the which-path information is never measured?
