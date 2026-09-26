@@ -38,10 +38,12 @@ Launching the photons did not restore interference.
 We alternated between launching the photons and measuring them instead.
 Across 6.6 hours of integration and 100 million photon detections, we observed no statistically significant difference in the twins' unconditioned interference.
 
-Standard quantum theory predicts this null result immediately, via the partial trace.
-But prior tests may have left the collapse-locality loophole open.
-If so, measuring the which-path information could have causally
-influenced what the interferometer recorded.
+Quantum theory predicts this null result immediately, via the partial trace.
+Interference depends only on whether the which-path information exists, not on
+whether anyone ever measures it.
+Because prior experiments always measured that information,
+they may have left the collapse-locality loophole open,
+and the measurement could in principle have causally influenced the interference record.
 For the surviving photons, it cannot.
 
 As with loophole-closing Bell tests, the result is not surprising.
