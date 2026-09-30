@@ -1,6 +1,6 @@
 ---
 title: Complementarity Test with Unmeasured, Permanently Inaccessible Path Markers
-date: 2026-09-28
+date: 2026-09-30
 unlisted: true
 excerpt: >-
   What happens in a quantum eraser experiment if the which-path information is

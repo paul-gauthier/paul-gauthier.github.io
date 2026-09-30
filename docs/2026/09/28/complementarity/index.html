@@ -1,0 +1,20 @@
+---
+layout: null
+---
+{% capture redirect_path %}{% post_url 2026-09-30-complementarity %}{% endcapture %}
+{% assign redirect_url = redirect_path | absolute_url %}
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>Post moved</title>
+    <link rel="canonical" href="{{ redirect_url }}">
+    <meta http-equiv="refresh" content="0; url={{ redirect_url }}">
+    <script>
+      window.location.replace({{ redirect_url | jsonify }} + window.location.search + window.location.hash);
+    </script>
+  </head>
+  <body>
+    <p>This post has moved to <a href="{{ redirect_url }}">its new address</a>.</p>
+  </body>
+</html>

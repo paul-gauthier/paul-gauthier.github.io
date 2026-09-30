@@ -28,6 +28,13 @@ if you want to preserve that URL.
 The test article is `docs/_posts/2026-09-25-unlisted-test.md`, with the URL
 `https://paulg.info/2026/09/25/unlisted-test/` after deployment.
 
+The complementarity post is dated September 30, 2026. Its former URL,
+`/2026/09/28/complementarity/`, is preserved by an HTML redirect in
+`docs/2026/09/28/complementarity/index.html`. The redirect uses Jekyll's
+`post_url` tag to resolve the destination and preserves query strings and
+fragments when JavaScript is enabled. GitHub Pages serves this page with HTTP
+200; a true HTTP 301 would require a proxy or a host with redirect support.
+
 ## Imported aider posts
 
 Imported aider posts live in `_posts/aider/`.
