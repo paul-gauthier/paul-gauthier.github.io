@@ -104,7 +104,7 @@ All exclude the full-restoration unit circle
 
 <figure class="post-video">
   <video controls muted playsinline preload="metadata" width="1920" height="1080"
-    poster="/assets/complementarity/idler-photons-day-207.jpg"
+    poster="/assets/complementarity/idler-photons-day-209.jpg"
     data-autoplay-in-view
     aria-label="Modeled propagation of the launched photons from UCSB into space">
     <source src="/assets/complementarity/idler-photons.mp4" type="video/mp4">
