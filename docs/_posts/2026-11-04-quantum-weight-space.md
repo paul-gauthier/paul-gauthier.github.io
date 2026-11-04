@@ -23,7 +23,7 @@ Explicit repairs made the transfer work without training and provided a useful s
 Weight-space techniques alone got within about 2-4×10⁻³ per site of the best published energies I found for the larger
 lattices, which is interesting but not really competitive.
 Adding a few hundred steps of training and one standard trick (a Lanczos step) matched the best published energy at
-14×14, and came within 5×10⁻⁵ per site of it at 18×18.
+14×14, and came within 5×10⁻⁵ per site at 18×18.
 
 The project took about two days and a few hundred dollars of cloud GPU time.
 
