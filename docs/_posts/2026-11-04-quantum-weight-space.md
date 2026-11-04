@@ -51,7 +51,7 @@ parameters, treats 2×2 patches of spins as tokens, and outputs the amplitude an
 spin configuration. It was trained on the 10×10 lattice only.
 
 Copying its weights onto a 14×14 lattice as is (adding the Marshall sign) gives an initial sampling estimate of about
-−0.39 per site.
+−0.39 per site (in units of J1).
 That's far from the best published 14×14 energy of −0.4967.
 We read through the weights looking for parts that depend on lattice size and
 found three.
