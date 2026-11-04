@@ -43,6 +43,8 @@ site while fine-tuning at 14×14 from our edited network, a naive copy and rando
 near the best published energy. (d) How far our energy per site is above the best published one at each lattice size,
 with the edits alone, after fine-tuning, and after one Lanczos step.*
 
+### Approach and results
+
 The base network is the Vision Transformer NQS released by Rende, Viteritti et al. (Commun. Phys. 2024).
 It has about 435k
 parameters, treats 2×2 patches of spins as tokens, and outputs the amplitude and phase of the wavefunction for a given
