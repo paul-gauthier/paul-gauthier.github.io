@@ -185,4 +185,7 @@ Our edits, fine-tunes and Lanczos steps used a few hundred dollars of GPU time.
 So one existing 10×10 training run became the starting point at four larger sizes, each of which would otherwise likely
 need its own run of thousands of GPU-hours.
 
+### Code and weights
 
+The code, the four fine-tuned networks, and the data behind the table and figure are on GitHub at
+[paul-gauthier/quantum-weight-space](https://github.com/paul-gauthier/quantum-weight-space).
