@@ -80,12 +80,51 @@ is −0.49674, also a network plus one Lanczos step. Ours is 1.3×10⁻⁵ lower
 
 We ran the same recipe at the other sizes, with 300 training steps at 12×12 and 16×16 and 600 at 18×18.
 
-| Lattice | WSP edits only | + fine-tuned | + one Lanczos step | Best published | Ours − best published |
+<style>
+.energy-results {
+  max-width: 100%;
+  margin: 1.5rem 0;
+  overflow-x: auto;
+}
+.energy-results table {
+  width: 100%;
+  border-collapse: collapse;
+  font-variant-numeric: tabular-nums;
+}
+.energy-results th,
+.energy-results td {
+  padding: 0.5rem 0.875rem;
+  text-align: right;
+}
+.energy-results th {
+  border-bottom: 2px solid currentColor;
+  line-height: 1.3;
+  vertical-align: bottom;
+}
+.energy-results td {
+  border-bottom: 1px solid rgba(127, 127, 127, 0.25);
+  white-space: nowrap;
+}
+.energy-results th:first-child,
+.energy-results td:first-child {
+  text-align: left;
+}
+.energy-results th:nth-child(5),
+.energy-results td:nth-child(5) {
+  border-left: 1px solid rgba(127, 127, 127, 0.35);
+}
+</style>
+
+<div class="energy-results" role="region" aria-label="Energy comparison by lattice size" tabindex="0" markdown="1">
+
+| Lattice | Edits only | + fine-tuning | + Lanczos | Published best | Difference |
 |---|---|---|---|---|---|
 | 12×12 | −0.4956(1) | −0.49690(4) | −0.49702(2) | [−0.49722](https://doi.org/10.1038/s41567-024-02566-1) | +2.1×10⁻⁴ |
 | 14×14 | −0.4940(1) | −0.49667(3) | −0.49675(3) | [−0.49674](https://doi.org/10.1088/2632-2153/acc56a) | −1.3×10⁻⁵ |
 | 16×16 | −0.4930(1) | −0.49647(1) | −0.49651(2) | [−0.49691](https://arxiv.org/abs/2603.14425v1) | +4.0×10⁻⁴ |
 | 18×18 | −0.4922(1) | −0.49637(3) | −0.49647(2) | [−0.49651](https://doi.org/10.1088/2632-2153/acc56a) | +4.4×10⁻⁵ |
+
+</div>
 
 *WSP edits only is the released network with the three edits and no training. The best published values come from a
 ResNet (12×12, Chen & Heyl 2024) and a CNN (14×14 and 18×18, Liang et al. 2023), each plus one Lanczos step, and a
