@@ -29,7 +29,7 @@ The project took about two days and a few hundred dollars of cloud GPU time.
 AI disclosure: The whole point of this effort was to let AI try and do surgery on the
 existing trained network,
 so Opus set the agenda for investigations and interventions and did all the work.
-I supervised, made suggestions, authorized GPU spend, etc.
+I helped steer and prioritize, made suggestions, allocated GPU spend, etc.
 Below here, the writing is mostly Opus reporting its approach and the results,
 edited to improve readability.
 {: .origin-note}
