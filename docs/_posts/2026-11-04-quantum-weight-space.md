@@ -90,7 +90,7 @@ We ran the same recipe at the other sizes, with 300 training steps at 12×12 and
 *WSP edits only is the released network with the three edits and no training. The best published values come from a
 ResNet (12×12, Chen & Heyl 2024) and a CNN (14×14 and 18×18, Liang et al. 2023), each plus one Lanczos step, and a
 CNN-MPS with no Lanczos step (16×16, Fan et al. 2026). The 12×12 value is read off a figure in Chen & Heyl's paper.
-The last column is our Lanczos result minus the best published value; at 18×18 that's about 3σ.*
+The last column is our Lanczos result minus the best published value.*
 
 ### Observations
 
