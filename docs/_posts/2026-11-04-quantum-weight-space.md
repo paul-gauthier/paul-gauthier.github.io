@@ -174,3 +174,14 @@ training or other settings, which we didn't try.
 
 The fine-tuning and the Lanczos step are standard methods.
 We used WSP to create the starting point they ran from.
+
+### Costs
+
+Nearly all the compute behind these results went into the 10×10 network before we started.
+Its model card reports 40 A100s for about four days (3,840 GPU-hours).
+This represents roughly $5,000–13,000 at today's rental prices.
+
+Our edits, fine-tunes and Lanczos steps used a few hundred dollars of GPU time.
+So one existing 10×10 training run became the starting point at four larger sizes, each of which would otherwise likely
+need its own run of thousands of GPU-hours.
+
