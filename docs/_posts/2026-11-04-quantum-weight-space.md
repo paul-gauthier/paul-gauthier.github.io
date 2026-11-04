@@ -30,7 +30,7 @@ The project took about two days and a few hundred dollars of cloud GPU time.
 AI disclosure: The whole point of this effort was to let AI try and do surgery on the network weights,
 so Opus set the agenda for investigations and interventions and did all the work.
 I supervised, made suggestions, authorized GPU spend, etc.
-Below here, the writing is mostly Opus reporting its approach and the results;
+Below here, the writing is mostly Opus reporting its approach and the results.
 
 ![The three weight-space edits, and fine-tuning results at 14×14 and four lattice sizes](/assets/quantum-weight-space/figure.png)
 
