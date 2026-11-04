@@ -45,7 +45,7 @@ with the edits alone, after fine-tuning, and after one Lanczos step.*
 
 ### Approach and results
 
-The base network is the Vision Transformer NQS released by Rende, Viteritti et al. (Commun. Phys. 2024).
+The base network is the Vision Transformer NQS released by Rende, Viteritti et al. ([Commun. Phys. 2024](https://www.nature.com/articles/s42005-024-01732-4)).
 It has about 435k
 parameters, treats 2×2 patches of spins as tokens, and outputs the amplitude and phase of the wavefunction for a given
 spin configuration. It was trained on the 10×10 lattice only.
