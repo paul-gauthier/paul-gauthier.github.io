@@ -62,7 +62,7 @@ The transfer rules require no additional training or newly fitted weights.
 offsets the network never saw. Heads that attend mostly to nearby patches get zero weight at the new offsets. The
 other heads get their average weight spread across them.
 
-2. The output head ends in a LayerNorm, which limits how large the log-amplitude can get regardless of lattice size. The
+2. The output head ends with layer normalization, which limits how large the log-amplitude can get regardless of lattice size. The
 number of disordered spin configurations grows exponentially with size, so on big lattices they swamp the ordered
 ones (panel b above). We replaced the single head with the original 10×10 head applied to every patch-aligned 10×10
 window of the lattice, summed the results, and divided by 25.
@@ -74,7 +74,8 @@ On larger lattices the network's own phase drifts, so we wrote the rule in expli
 After the amplitude fix, this phase error was most of what was still getting worse as the lattice grew.
 
 After applying these edits,
-we then fine-tuned the edited network with ordinary VMC (MinSR).
+we then fine-tuned the edited network with ordinary variational Monte Carlo,
+using the [MinSR optimizer](https://www.nature.com/articles/s41567-024-02566-1).
 The windowed implementation adds a separate head copy and mask arrays, which are updated during fine-tuning.
 We gave the same 300-step training budget to a naive
 copy of the 10×10 weights (with the Marshall sign) and to random weights (panel c above). Ours trained smoothly. The naive
