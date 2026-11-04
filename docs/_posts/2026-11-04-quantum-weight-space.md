@@ -165,6 +165,9 @@ The bonds inside a patch come out a
 little stronger than bonds between patches, where the true ground state has them all equal.
 The states also pick up more spin contamination as the lattice grows. So they're fine for energies, 
 but we wouldn’t trust them on finer details of the ground state’s structure.
+Symmetrizing the network over the four one-site shifts inside a patch should remove the patch pattern, and projecting
+onto total spin zero should remove the contamination. We haven’t tried either, apart from a quick check that the
+shift-averaged network has a slightly lower 14×14 energy.
 
 The naive and scratch baselines only got the same short training budget as ours. They might do better with much more
 training or other settings, which we didn't try.
