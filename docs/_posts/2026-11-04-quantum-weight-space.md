@@ -20,7 +20,7 @@ A naive transfer attempt failed, and Opus
 traced the failure to three size-dependent assumptions in the network's attention, output head, and phase.
 Explicit repairs made the transfer work without training and provided a useful starting point for a short fine-tune.
 
-Weight-space techniques alone got within about 2-4×10⁻³ per site of the best published energies I found for those larger
+Weight-space techniques alone got within about 2-4×10⁻³ per site of the best published energies I found for the larger
 lattices, which is interesting but not really competitive.
 Adding a few hundred steps of training and one standard trick (a Lanczos step) matched the best published energy at
 14×14, and came within 5×10⁻⁵ per site of it at 18×18.
@@ -68,8 +68,8 @@ Opus was quite surprised to find this hidden unit.
 On larger lattices the network's own phase drifts, so we wrote the rule in explicitly.
 After the amplitude fix, this phase error was most of what was still getting worse as the lattice grew.
 
-With these edits and no training, the 14×14 energy is −0.4940 per site.
-We then fine-tuned the edited network with ordinary VMC (MinSR).
+After applying these edits,
+we then fine-tuned the edited network with ordinary VMC (MinSR).
 The windowed implementation adds a separate head copy and mask arrays, which are updated during fine-tuning.
 We gave the same 300-step training budget to a naive
 copy of the 10×10 weights (with the Marshall sign) and to random weights (panel c above). Ours trained smoothly. The naive
