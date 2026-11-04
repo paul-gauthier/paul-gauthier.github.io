@@ -27,7 +27,8 @@ Adding a few hundred steps of training and one standard trick (a Lanczos step) m
 
 The project took about two days and a few hundred dollars of cloud GPU time.
 
-AI disclosure: The whole point of this effort was to let AI try and do surgery on the network weights,
+AI disclosure: The whole point of this effort was to let AI try and do surgery on the
+existing trained network,
 so Opus set the agenda for investigations and interventions and did all the work.
 I supervised, made suggestions, authorized GPU spend, etc.
 Below here, the writing is mostly Opus reporting its approach and the results,
