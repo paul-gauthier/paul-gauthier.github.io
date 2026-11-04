@@ -20,7 +20,7 @@ A naive transfer attempt failed, and Opus
 traced the failure to three size-dependent assumptions in the network's attention, output head, and phase.
 Explicit repairs made the transfer work without training and provided a useful starting point for a short fine-tune.
 
-Weight-space techniques alone got within about 2-4×10⁻³ per site of the best published energies I found for the larger
+These weight-space techniques alone got within about 2-4×10⁻³ per site of the best published energies I found for the larger
 lattices, which is interesting but not really competitive.
 Adding a few hundred steps of training and one standard trick (a Lanczos step) matched the best published energy at
 14×14, and came within 5×10⁻⁵ per site at 18×18.
