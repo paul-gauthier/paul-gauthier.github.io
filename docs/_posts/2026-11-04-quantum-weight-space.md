@@ -1,7 +1,6 @@
 ---
 title: Weight-space programming a neural quantum state
 date: 2026-11-04
-unlisted: true
 excerpt: >-
   Working with Opus to diagnose and repair a neural quantum state's transfer from
   a 10×10 spin lattice to larger lattices, then fine-tune it to competitive energies.
