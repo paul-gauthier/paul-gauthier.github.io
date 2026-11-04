@@ -105,7 +105,7 @@ clear record, and then single samples moved it by about 1×10⁻⁴ as more came
 probability near this node, then reweighting to the original wavefunction, gave a smaller gain that held steady as
 samples were added.
 
-Fine-tuning also levels off within about 300 steps at every size: another 300 steps
+Fine-tuning also levels off within about 300 steps at every lattice size: another 300 steps
 gained only 4-8×10⁻⁵.
 
 ### Caveats
