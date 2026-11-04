@@ -30,7 +30,8 @@ The project took about two days and a few hundred dollars of cloud GPU time.
 AI disclosure: The whole point of this effort was to let AI try and do surgery on the network weights,
 so Opus set the agenda for investigations and interventions and did all the work.
 I supervised, made suggestions, authorized GPU spend, etc.
-Below here, the writing is mostly Opus reporting its approach and the results.
+Below here, the writing is mostly Opus reporting its approach and the results,
+edited to improve readability.
 {: .origin-note}
 
 ![The three weight-space edits, and fine-tuning results at 14×14 and four lattice sizes](/assets/quantum-weight-space/figure.png)
@@ -159,8 +160,8 @@ The correlations show no indication of Néel order over these sizes.
 But the transfer leaves a pattern aligned with the 2×2 patches.
 The bonds inside a patch come out a
 little stronger than bonds between patches, where the true ground state has them all equal.
-The states also pick up more spin contamination as the lattice grows. So they're fine for energies, but we wouldn't read
-dimer or plaquette order off them.
+The states also pick up more spin contamination as the lattice grows. So they're fine for energies, 
+but we wouldn’t trust them on finer details of the ground state’s structure.
 
 The naive and scratch baselines only got the same short training budget as ours. They might do better with much more
 training or other settings, which we didn't try.
