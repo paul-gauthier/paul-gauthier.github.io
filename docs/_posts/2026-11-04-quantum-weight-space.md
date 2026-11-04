@@ -185,3 +185,4 @@ Our edits, fine-tunes and Lanczos steps used a few hundred dollars of GPU time.
 So one existing 10×10 training run became the starting point at four larger sizes, each of which would otherwise likely
 need its own run of thousands of GPU-hours.
 
+
