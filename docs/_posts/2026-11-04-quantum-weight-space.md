@@ -6,7 +6,7 @@ excerpt: >-
   Working with Opus to diagnose and repair a neural quantum state's transfer from
   a 10×10 spin lattice to larger lattices, then fine-tune it to competitive energies.
 social_image: /assets/quantum-weight-space/social.png
-image_alt: Energy per site above the best published values at four lattice sizes, with WSP edits, fine-tuning, and one Lanczos step
+image_alt: The three weight-space edits that run a 10×10 network on an 18×18 lattice - attention at new offsets, the head on every 10×10 window, and the sign rule
 ---
 
 I've been looking for an excuse to explore neural quantum states (NQS).
