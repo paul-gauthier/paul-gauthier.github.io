@@ -35,7 +35,7 @@ Below here, the writing is mostly Opus reporting its approach and the results,
 edited to improve readability.
 {: .origin-note}
 
-![The three weight-space edits, and fine-tuning results at 14×14 and four lattice sizes](/assets/quantum-weight-space/figure.png)
+[![The three weight-space edits, and fine-tuning results at 14×14 and four lattice sizes](/assets/quantum-weight-space/figure.png)](/assets/quantum-weight-space/figure.png)
 
 *(a) The three edits to the 10×10 network. (b) How much less amplitude the network gives disordered
 configurations than ordered ones, per site, with the original output head and with the edited one. (c) Energy per
