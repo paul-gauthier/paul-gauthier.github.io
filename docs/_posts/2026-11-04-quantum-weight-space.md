@@ -12,15 +12,17 @@ I've been looking for an excuse to explore neural quantum states (NQS).
 The recent MIT work on [weight-space programming](https://rikiyat.github.io/blog/weight-space-programming/) (WSP)
 seemed like an interesting reason to dig in.
 
-A neural quantum state is a neural network that's used to represents a quantum wavefunction.
-On a lattice, you feed it a configuration of the spins (up/down) at each location and it returns an amplitude and phase for that configuration.
-In the frustrated J1-J2 model, each spin wants to point opposite its nearest neighbours, so they constantly want to flip and adjust.
+A neural quantum state is a neural network that's used to represent a quantum wavefunction.
+On a lattice, you feed it a configuration of the spins (up/down) at each location, and it returns an amplitude and phase for that configuration.
+The quantum state is a weighted mix of all the configurations at once.
+In the frustrated J1-J2 model, each spin wants to point opposite both its nearest neighbors (J1) and its diagonal neighbors (J2), and no arrangement satisfies both.
 They're frustrated!
-The NQS is trained to find the configuration where they all settle down, at their lowest energy.
+At J2/J1 = 0.5 the two pulls are evenly matched, which makes it one of the hardest cases.
+The NQS is trained to find the mix with the lowest energy, the ground state, so lower energy means a better network.
 
-Each NQS simulates a specific sized lattice.
-A 10x10 lattice can have 2^100 configurations, but a small network with only a few hundred thousand weights can model it.
-Generally, a different lattice size needs to be retrained from scratch, which often costs thousands of dollars.
+Each NQS simulates a lattice of a specific size.
+A 10×10 lattice has 2¹⁰⁰ configurations, but a small network with only a few hundred thousand weights can model it.
+Generally, a network for a different lattice size has to be trained from scratch, which often costs thousands of dollars.
 
 I worked with Opus to apply WSP techniques to an NQS trained on a 10×10 lattice
 and transfer it to larger lattices up to 18×18.
@@ -34,8 +36,8 @@ Adding a few hundred steps of training and one standard trick (a Lanczos step) m
 14×14, and came within 5×10⁻⁵ per site at 18×18.
 
 The project took about two days and a few hundred dollars of cloud GPU time.
-From-scratch training of comparable 12x12, 14x14, 16x16 and 18x18 lattices
-might cost $40k or more.
+From-scratch training of comparable 12×12, 14×14, 16×16 and 18×18 lattices
+might cost tens of thousands of dollars.
 
 AI disclosure: The whole point of this effort was to let AI try and do surgery on the
 existing trained network,
