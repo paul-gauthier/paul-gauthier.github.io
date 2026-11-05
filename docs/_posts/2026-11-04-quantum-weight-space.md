@@ -12,9 +12,18 @@ I've been looking for an excuse to explore neural quantum states (NQS).
 The recent MIT work on [weight-space programming](https://rikiyat.github.io/blog/weight-space-programming/) (WSP)
 seemed like an interesting reason to dig in.
 
-I worked with Opus to apply WSP techniques to an NQS trained on a 10×10 lattice of spins in the frustrated
-J1-J2 model at J2/J1 = 0.5, a hard regime.
-The goal was to transfer it to larger lattices up to 18×18.
+A neural quantum state is a neural network that's used to represents a quantum wavefunction.
+On a lattice, you feed it a configuration of the spins (up/down) at each location and it returns an amplitude and phase for that configuration.
+In the frustrated J1-J2 model, each spin wants to point opposite its nearest neighbours, so they constantly want to flip and adjust.
+They're frustrated!
+The NQS is trained to find the configuration where they all settle down, at their lowest energy.
+
+Each NQS simulates a specific sized lattice.
+A 10x10 lattice can have 2^100 configurations, but a small network with only a few hundred thousand weights can model it.
+Generally, a different lattice size needs to be retrained from scratch, which often costs thousands of dollars.
+
+I worked with Opus to apply WSP techniques to an NQS trained on a 10×10 lattice
+and transfer it to larger lattices up to 18×18.
 A naive transfer attempt failed, and Opus
 traced the failure to three size-dependent assumptions in the network's attention, output head, and phase.
 Explicit repairs made the transfer work without training and provided a useful starting point for a short fine-tune.
@@ -25,6 +34,8 @@ Adding a few hundred steps of training and one standard trick (a Lanczos step) m
 14×14, and came within 5×10⁻⁵ per site at 18×18.
 
 The project took about two days and a few hundred dollars of cloud GPU time.
+From-scratch training of comparable 12x12, 14x14, 16x16 and 18x18 lattices
+might cost $40k or more.
 
 AI disclosure: The whole point of this effort was to let AI try and do surgery on the
 existing trained network,
