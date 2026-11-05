@@ -42,7 +42,7 @@ might cost tens of thousands of dollars.
 AI disclosure: 
 The MIT results demonstrate that frontier LLMs can directly manipulate the
 weights of an existing trained network.
-For this experiment,
+So for this experiment,
 Opus set the agenda for investigations and interventions to do that to a NQS.
 I helped steer, prioritize, triage and made suggestions, allocated GPU spend, etc.
 Below here, the writing is mostly Opus reporting its approach and the results,
