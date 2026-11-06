@@ -11,6 +11,8 @@ image_alt: The three weight-space edits that run a 10×10 network on an 18×18 l
 I've been looking for an excuse to explore neural quantum states (NQS).
 The recent MIT work on [weight-space programming](https://rikiyat.github.io/blog/weight-space-programming/) (WSP)
 seemed like an interesting reason to dig in.
+They found that frontier LLMs can directly manipulate the weights of an existing trained network.
+So I decided to see if we could manipulate a trained neural quantum state.
 
 A neural quantum state is a neural network that's used to represent a quantum wavefunction.
 On a lattice, you feed it a configuration of the spins (up/down) at each location, and it returns an amplitude and phase for that configuration.
@@ -31,7 +33,9 @@ traced the failure to three size-dependent assumptions in the network's attentio
 Explicit repairs made the transfer work without training and provided a useful starting point for a short fine-tune.
 
 The weight-space techniques alone got within about 2-4×10⁻³ per site of the best published energies I found for the larger
-lattices, which is interesting but not really competitive.
+lattices. 
+This was interesting in that the new networks worked at novel lattice sizes,
+but the energies were not really competitive.
 Adding a few hundred steps of training and one standard trick (a Lanczos step) matched the best published energy at
 14×14, and came within 5×10⁻⁵ per site at 18×18.
 
@@ -40,10 +44,11 @@ From-scratch training of comparable 12×12, 14×14, 16×16 and 18×18 lattices
 might cost tens of thousands of dollars.
 
 AI disclosure: 
-The MIT results demonstrate that frontier LLMs can directly manipulate the
+The goal was to build on the MIT results that
+demonstrate that frontier LLMs can directly manipulate the
 weights of an existing trained network.
 So for this experiment,
-Opus set the agenda for investigations and interventions to do that to a NQS.
+Opus set the agenda for investigations and interventions to do surgery on an NQS.
 I helped steer, prioritize, triage and made suggestions, allocated GPU spend, etc.
 Below here, the writing is mostly Opus reporting the work and results,
 edited to improve readability.
