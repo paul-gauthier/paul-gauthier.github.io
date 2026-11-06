@@ -45,7 +45,7 @@ weights of an existing trained network.
 So for this experiment,
 Opus set the agenda for investigations and interventions to do that to a NQS.
 I helped steer, prioritize, triage and made suggestions, allocated GPU spend, etc.
-Below here, the writing is mostly Opus reporting its approach and the results,
+Below here, the writing is mostly Opus reporting the work and results,
 edited to improve readability.
 {: .origin-note}
 
